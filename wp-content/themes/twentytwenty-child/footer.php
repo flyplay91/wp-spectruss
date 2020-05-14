@@ -49,19 +49,11 @@
 				</div>
 				<ul class="main-nav">
 					<li><a href="">home</a></li>
-					<li><a href="">case studies</a></li>
+					<li><a href="">about</a></li>
+					<li><a href="">work</a></li>
 					<li><a href="">news</a></li>
-					<li><a href="">now hiring</a></li>
 					<li><a href="">contact</a></li>
-				</ul>
-				<ul class="sub-nav">
-					<li><a href="">e-commerce</a></li>
-					<li><a href="">web design</a></li>
-					<li><a href="">digital marketing</a></li>
-					<li><a href="">branding</a></li>
-					<li><a href="">photo/video</a></li>
-					<li><a href="">vCMO</a></li>
-					<li><a href="">SPECTRUSS MD</a></li>
+					<li><a href="">now hiring</a></li>
 				</ul>
 			</div>
 			<div class="vertical-line"></div>

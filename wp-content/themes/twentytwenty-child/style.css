@@ -621,21 +621,15 @@ ul, li {
   font-family: 'Gotham-Medium';
 }
 
+#site-footer .main-nav {
+  text-align: right;
+}
+
 #site-footer .main-nav li {
   line-height: calc(50em / 16);
 }
 
 #site-footer .main-nav a {
-  color: white;
-  font-size: calc(20em / 16);
-  font-family: 'Gotham-Medium';
-}
-
-#site-footer .sub-nav li {
-  line-height: calc(50em / 16);
-}
-
-#site-footer .sub-nav a {
   color: white;
   font-size: calc(20em / 16);
   font-family: 'Gotham-Medium';
