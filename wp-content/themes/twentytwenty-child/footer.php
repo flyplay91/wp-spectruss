@@ -20,11 +20,31 @@
 					<p><a target="_blank" href="tel:4238008633">423.800.8633</a></p>
 					<p><a target="_blank" href="mailto:info@spectruss.com">info@spectruss.com</a></p>
 					<ul>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
+						<li>
+							<a target="_blank" href="https://www.linkedin.com/company/spectruss/">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-linkedin.png" alt="LinkedIn">
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.youtube.com/channel/UCUDuoHhVlU9yi1DmdGH9PNQ">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-youtube.png" alt="YouTube">
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.instagram.com/spectrussllc/">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-instagram.png" alt="Instagram">
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.facebook.com/SPECTRUSS/">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-facebook.png" alt="Facebook">
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://twitter.com/spectrussllc">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-twitter.png" alt="">
+							</a>
+						</li>
 					</ul>
 				</div>
 				<ul class="main-nav">
