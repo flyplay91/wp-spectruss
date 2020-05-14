@@ -123,6 +123,11 @@ ul, li {
   -webkit-box-pack: justify;
   justify-content: space-between;
   align-items: flex-start;
+  display: none;
+}
+
+.header-hamburger-menu.active {
+  display: block;
 }
 
 .hamburger-call {

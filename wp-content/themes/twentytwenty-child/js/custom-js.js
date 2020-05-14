@@ -2,7 +2,15 @@ $(document).ready(function() {
 	firstCaseStudyAnimation();
 
 	$(window).on('scroll', doAnimations);
-  	$(window).trigger('scroll');
+	$(window).trigger('scroll');
+	  
+	$('body').on('click', '.header-nav .hamburger-nav', function() {
+		$('.header-hamburger-menu').addClass('active');
+	});
+
+	$('body').on('click', '.hamburger-top img', function() {
+		$('.header-hamburger-menu').removeClass('active');
+	});
 });
 
 var doAnimations = function() {
