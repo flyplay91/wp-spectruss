@@ -28,6 +28,61 @@
 				<?php twentytwenty_site_logo(); ?>
 			</div>
 			<div class="header-nav">
-				<?php get_template_part( 'template-parts/modal-menu' ); ?>
+				<label class="hamburger-nav">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hamburger_nav.png">
+				</label>
+
+				<div class="header-hamburger-menu">
+					<div class="hamburger-top">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header_x.png">
+					</div>
+					<ul class="hamburger-middle">
+						<?php
+						if ( has_nav_menu( 'expanded' ) ) {
+							wp_nav_menu(
+								array(
+									'container'      => '',
+									'items_wrap'     => '%3$s',
+									'show_toggles'   => true,
+									'theme_location' => 'expanded',
+								)
+							);
+						}
+						?>
+					</ul>
+					<div class="hamburger-bottom">
+						<div class="hamburger-call">
+							<label>Call<br>Us Today:</label>
+							<a target="_blank" href="tel:4238008633">423.800.8633</a>
+						</div>
+						<ul>
+							<li>
+								<a target="_blank" href="https://www.linkedin.com/company/spectruss/">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-linkedin.png" alt="LinkedIn">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.youtube.com/channel/UCUDuoHhVlU9yi1DmdGH9PNQ">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-youtube.png" alt="YouTube">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.instagram.com/spectrussllc/">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-instagram.png" alt="Instagram">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.facebook.com/SPECTRUSS/">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-facebook.png" alt="Facebook">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://twitter.com/spectrussllc">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-twitter.png" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>

@@ -97,12 +97,123 @@ ul, li {
   position: fixed;
   width: 100%;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 25px 0;
+  background-color: transparent;
+  justify-content: space-between;
 }
 
 .header-logo {
-  padding-left: calc(18em / 16);
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.header-nav {
+  position: relative;
+}
+
+.header-hamburger-menu {
+  position: absolute;
+  width: calc(300em / 16);
+  right: 0;
+  top: 0;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hamburger-call {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: solid 3px white;
+  padding-bottom: 10px;
+}
+
+.hamburger-call > label {
+  color: white;
+  font-family: "Gotham-Light";
+  margin-bottom: 0;
+  font-size: calc(18em / 16);
+}
+
+.hamburger-call a {
+  color: white;
+  font-family: "Gotham-Black";
+  font-size: calc(18em / 16);
+}
+
+.header-nav .hamburger-nav {
+  margin: 0;
+  width: calc(110em / 16);
+  height: calc(110em / 16);
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hamburger-top {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  user-select: none;
+}
+
+.hamburger-top img {
+  width: 33px;
+  margin: calc(30em / 16);
+  cursor: pointer;
+}
+
+.hamburger-middle {
+  width: 100%;
+  padding-left: calc(45em / 16);
+}
+
+.hamburger-middle li:not(:last-child) {
+  margin-bottom: 3vh;
+}
+
+.hamburger-middle li a {
+  font-size: calc(30em / 16);
+  color: white;
+  font-family: "Gotham-Black";
+  position: relative;
+}
+
+.hamburger-middle li a:before {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 21px;
+  height: 21px;
+  background-image: url('assets/images/header-bullet.png');
+  position: absolute;
+  left: -30px;
+  top: 38%;
+}
+
+.hamburger-bottom {
+  align-self: center;
+  margin-bottom: calc(57em / 16);
+  margin-top: auto;
+  width: 100%;
+  padding-left: calc(24em / 16);
+  padding-right: calc(24em / 16);
+}
+
+.hamburger-bottom ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
 }
 
 .home-page .hero {
