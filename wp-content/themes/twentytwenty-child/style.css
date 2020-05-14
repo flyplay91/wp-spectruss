@@ -1,0 +1,660 @@
+@charset "UTF-8";
+/*
+Theme Name: Twenty Twenty Child
+Theme URI: http://example.com/twenty-twenty-child/
+description:
+  Twenty Twenty Child Theme
+Author: Simon
+Author URI: http://example.com
+Template: twentytwenty
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: twenty-twenty-child
+*/
+@font-face {
+  font-family: 'Gotham-Black';
+  src:  url("assets/fonts/Gotham-Black.eot");
+  src:  url("assets/fonts/Gotham-Black.eot?#iefix") format("embedded-opentype"), 
+        url("assets/fonts/Gotham-Black.woff2") format("woff2"), 
+        url("assets/fonts/Gotham-Black.woff") format("woff"), 
+        url("assets/fonts/Gotham-Black.ttf") format("truetype"), 
+        url("assets/fonts/Gotham-Black.svg#gothambook") format("svg");
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src:  url("assets/fonts/Gotham-Bold.eot");
+  src:  url("assets/fonts/Gotham-Bold.eot?#iefix") format("embedded-opentype"), 
+        url("assets/fonts/Gotham-Bold.woff2") format("woff2"), 
+        url("assets/fonts/Gotham-Bold.woff") format("woff"), 
+        url("assets/fonts/Gotham-Bold.ttf") format("truetype"), 
+        url("assets/fonts/Gotham-Bold.svg#gothambook") format("svg");
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src:  url("assets/fonts/Gotham-Book.eot");
+  src:  url("assets/fonts/Gotham-Book.eot?#iefix") format("embedded-opentype"), 
+        url("assets/fonts/Gotham-Book.woff2") format("woff2"), 
+        url("assets/fonts/Gotham-Book.woff") format("woff"), 
+        url("assets/fonts/Gotham-Book.ttf") format("truetype"), 
+        url("assets/fonts/Gotham-Book.svg#gothambook") format("svg");
+}
+
+@font-face {
+  font-family: 'Gotham-Light';
+  src:  url("assets/fonts/Gotham-Light.eot");
+  src:  url("assets/fonts/Gotham-Light.eot?#iefix") format("embedded-opentype"), 
+        url("assets/fonts/Gotham-Light.woff2") format("woff2"), 
+        url("assets/fonts/Gotham-Light.woff") format("woff"), 
+        url("assets/fonts/Gotham-Light.ttf") format("truetype"), 
+        url("assets/fonts/Gotham-Light.svg#gothambook") format("svg");
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src:  url("assets/fonts/Gotham-Medium.eot");
+  src:  url("assets/fonts/Gotham-Medium.eot?#iefix") format("embedded-opentype"), 
+        url("assets/fonts/Gotham-Medium.woff2") format("woff2"), 
+        url("assets/fonts/Gotham-Medium.woff") format("woff"), 
+        url("assets/fonts/Gotham-Medium.ttf") format("truetype"), 
+        url("assets/fonts/Gotham-Medium.svg#gothambook") format("svg");
+}
+
+@font-face {
+  font-family: 'Gotham-Thin';
+  src:  url("assets/fonts/Gotham-Thin.eot");
+  src:  url("assets/fonts/Gotham-Thin.eot?#iefix") format("embedded-opentype"), 
+        url("assets/fonts/Gotham-Thin.woff2") format("woff2"), 
+        url("assets/fonts/Gotham-Thin.woff") format("woff"), 
+        url("assets/fonts/Gotham-Thin.ttf") format("truetype"), 
+        url("assets/fonts/Gotham-Thin.svg#gothambook") format("svg");
+}
+
+body {
+  font-size: calc(100vw * 16/1440);
+  background-color: transparent;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#site-header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 25px 0;
+}
+
+.header-logo {
+  padding-left: calc(18em / 16);
+}
+
+.home-page .hero {
+  height: calc(820em / 16);
+  position: relative;
+}
+
+.home-page .hero-triangle {
+  width: 0;
+  height: 0;
+  border-top: calc(820em / 16) solid black;
+  border-right: calc(1052em / 16) solid transparent;
+  position: absolute;
+  top: 0;
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  left: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.home-page .hero-video {
+  width: calc(856em / 16);
+  height: calc(476em / 16);
+  position: absolute;
+  top: calc(224em / 16);
+  left: calc(384em / 16);
+}
+
+.home-page .hero-video iframe {
+  width: 100%;
+  height: 100%;
+
+}
+
+.home-page .hero-line {
+  background-image: url('assets/images/home_hero_right_line.png');
+  width: calc(450em / 16);
+  height: calc(450em / 16);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.home-page .hero-dot {
+  background-image: url('assets/images/home_hero_dots.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: calc(87em / 16);
+  top: calc(90em / 16);
+  width: calc(285em / 16);
+  height: calc(300em / 16);
+}
+
+.home-page .hero-title {
+  font-size: calc(47em / 16);
+  color: white;
+  position: absolute;
+  top: calc(40em / 16);
+  left: calc(48em / 16);
+  text-align: right;
+  font-family: 'Gotham-Light';
+  line-height: calc(20em / 16);
+}
+
+.home-page .hero-title b {
+  font-family: 'Gotham-Black';
+}
+
+.home-page .hero-sticker {
+  width: calc(240em / 16);
+  height: calc(240em / 16);
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  right: calc(87em / 16);
+  bottom: calc(51em / 16);
+}
+
+.home-page .hero-sticker span.first-text {
+  font-size: calc(58em / 16);
+  font-family: 'Gotham-Thin';
+}
+
+.home-page .hero-sticker span.second-text {
+  font-size: calc(33em / 16);
+  font-family: 'Gotham-Black';
+}
+
+.home-page .hero-sticker span.third-text {
+  font-size: calc(36em / 16);
+  font-family: 'Gotham-Light';
+}
+
+.home-page .casestudy {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(780em / 16);
+  position: relative;
+  color: black;
+}
+
+.home-page .casestudy.vert {
+  color: white;
+}
+.home-page .casestudy.vert .btn-casestudy {
+  color: white;
+  border-color: white;
+}
+
+.home-page .casestudy.vert .btn-casestudy:before {
+  filter: invert(0);
+}
+
+.home-page .casestudy.vert .btn-casestudy:after {
+  border-color: white;
+}
+
+.home-page .casestudy-content {
+  position: absolute;
+  top: 50%;
+  left: calc(69em / 16);
+}
+
+.home-page .casestudy-content.active {
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+.home-page .casestudy--liberty {
+  background-image: url('assets/images/casestudy_liberty.jpg');
+}
+
+.home-page .casestudy--royal {
+  background-image: url('assets/images/casestudy_royal.jpg');
+}
+
+.home-page .casestudy--hunter-museum {
+  background-image: url('assets/images/casestudy_hunter_museum.jpg');
+}
+
+.home-page .casestudy--brewski {
+  background-image: url('assets/images/casestudy_brewski.jpg');
+}
+
+.home-page .casestudy--transcard {
+  background-image: url('assets/images/casestudy_transcard.jpg');
+}
+
+.home-page .casestudy--lookout {
+  background-image: url('assets/images/casestudy_lookout.jpg');
+}
+
+.home-page .casestudy--about {
+  background-image: url('assets/images/casestudy_aboutus.jpg');
+}
+
+.home-page .casestudy .title-casestudy {
+  font-size: calc(39em / 16);
+  text-transform: uppercase;
+  font-family: 'Gotham-Black';
+  letter-spacing: 2px;
+}
+
+.home-page .casestudy .desc-casestudy {
+  font-size: calc(24em / 16);
+  line-height: calc(16em / 16);
+  font-family: 'Gotham-Book';
+  margin-top: 15px;
+}
+
+.home-page .btn-casestudy {
+  font-size: calc(24em / 16);
+  color: black;
+  display: inline-block;
+  margin-top: calc(18em / 16);
+  border: solid 3px black;
+  padding: 9px 20px 13px 20px;
+  position: relative;
+  font-family: 'Gotham-Black';
+}
+
+.home-page .btn-casestudy:before {
+  background-image: url('assets/images/right_arrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  width: 15px;
+  height: 25px;
+  position: absolute;
+  right: calc(-22em / 16);
+  top: 50%;
+  transform: translateY(-50%);
+  filter: invert(1);
+}
+
+.home-page .btn-casestudy:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: calc(34em / 16);
+  height: calc(32em / 16);
+  border: solid 3px black;
+  right: calc(-34em / 16);
+  top: -3px;
+  border-left: none;
+}
+
+.home-page .news {
+  padding: calc(90em / 16) calc(39em / 16);
+}
+
+.home-page .news > h2 {
+  font-size: calc(87em / 16);
+  line-height: calc(15em / 16);
+  font-family: 'Gotham-Thin';
+}
+
+.home-page .news > h2 b {
+  font-family: 'Gotham-Bold';
+}
+
+
+
+.home-page .news-block {
+  display: flex;
+  margin-top: calc(30em / 16);
+}
+
+.home-page .dot-img {
+  width: 12%;
+  padding-top: calc(120em / 16);
+}
+
+.home-page .news-dot {
+  display: flex;
+  width: 88%;
+  flex-wrap: wrap;
+}
+
+.home-page .news-dot-item {
+  width: 33.333%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.home-page .news-dot-item.second--news {
+  padding-top: calc(60em / 16);
+}
+
+.home-page .news-dot-item.third--news {
+  padding-top: calc(120em / 16);
+}
+
+.home-page .news-item {
+  border-bottom: solid 5px black;
+  padding-bottom: 20px;
+}
+
+.home-page .news-item a {
+  color: black;
+  display: block;
+  position: relative;
+}
+
+.home-page .news-item-date {
+  writing-mode: vertical-lr;
+  color: white;
+  background-color: black;
+  font-size: calc(18em / 16);
+  padding: 10px 5px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.home-page .news-item-title {
+  font-size: calc(16em / 16);
+  margin-top: calc(18em / 16);
+  font-family: 'Gotham-Bold';
+}
+
+.home-page .news-item-arrow {
+  position: absolute;
+  bottom: -11px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 3px black;
+  border-radius: 50%;
+}
+
+.home-page .news-item-arrow img {
+  filter: invert(1);
+}
+
+.home-page .news-item:hover .news-item-arrow {
+  background-color: black;
+}
+
+.home-page .news-item:hover .news-item-arrow img {
+  filter: invert(0);
+}
+
+.home-page .halfframe-all-news {
+  padding-left: calc(160em / 16);
+  display: flex;
+  align-items: flex-end;
+}
+
+.home-page .halfframe-all-news a {
+  font-size: calc(25em / 16);
+  color: black;
+  position: relative;
+  margin-left: 50px;
+  font-family: 'Gotham-Black';
+}
+
+.home-page .halfframe-all-news a:after {
+  content: '';
+  background-image: url('assets/images/right_arrow.png');
+  filter: invert(1);
+  position: absolute;
+  right: -50px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  border: solid 3px white;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.home-page .halfframe-all-news a:hover:after {
+  filter: invert(0);
+  background-color: black;
+  border-color: black;
+}
+
+#site-footer {
+  background-color: black;
+  display: flex;
+  padding: calc(94em / 16) calc(56em / 16) calc(60em / 16);
+  justify-content: space-between;
+}
+
+#site-footer .vertical-line {
+  width: 2px;
+  background-color: white;
+}
+
+#site-footer .nav-block {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#site-footer .address-block > img {
+  margin-bottom: 35px;
+}
+
+#site-footer .address-block p {
+  margin-bottom: calc(36em / 16);
+  font-family: 'Gotham-Medium';
+}
+
+#site-footer .address-block p a {
+  color: white;
+  font-family: 'Gotham-Medium';
+}
+
+#site-footer .main-nav li {
+  line-height: calc(50em / 16);
+}
+
+#site-footer .main-nav a {
+  color: white;
+  font-size: calc(20em / 16);
+  font-family: 'Gotham-Medium';
+}
+
+#site-footer .sub-nav li {
+  line-height: calc(50em / 16);
+}
+
+#site-footer .sub-nav a {
+  color: white;
+  font-size: calc(20em / 16);
+  font-family: 'Gotham-Medium';
+}
+
+#site-footer .logos-block {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#site-footer .mailchimp-form .mailchimp-label {
+  color: white;
+  font-size: calc(18em / 16);
+  margin-bottom: 15px;
+  line-height: 1.3;
+  font-family: 'Gotham-Medium';
+}
+
+#site-footer .subscribe-logos {
+  width: 58%;
+}
+
+#site-footer .subscribe-logos .logo-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+#site-footer .subscribe-logos .logo-items img {
+  width: 47%;
+  margin-top: 5%;
+  object-fit: contain;
+}
+
+#site-footer .dots {
+  width: 40;
+}
+
+#site-footer .dots img {
+  width: 100%;
+}
+
+/* ============================== */
+.animatable {
+  visibility: hidden;
+  -webkit-animation-play-state: paused;   
+  -moz-animation-play-state: paused;     
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;   
+  animation-play-state: paused; 
+}
+
+/* show objects being animated */
+.animated {
+  visibility: visible;
+  
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+
+/* CSS Animations (extracted from http://glifo.uiparade.com/) */
+@-webkit-keyframes moveUp {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(120px);
+	}	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes moveUp {
+	0% {
+		opacity: 1;
+		-moz-transform: translateY(120px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@-o-keyframes moveUp {
+	0% {
+		opacity: 1;
+		-o-transform: translateY(120px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes moveUp {
+	0% {
+		opacity: 1;
+		transform: translateY(120px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+.animated.animationDelay{
+	animation-delay:.4s;
+	-webkit-animation-delay:.4s;
+}
+.animated.animationDelayMed{
+	animation-delay:1.2s;
+	-webkit-animation-delay:1.2s;
+}
+.animated.animationDelayLong{
+	animation-delay:1.6s;
+	-webkit-animation-delay:1.6s;
+}
+.animated.moveUp {
+	-webkit-animation-name: moveUp;
+	-moz-animation-name: moveUp;
+	-o-animation-name: moveUp;
+	animation-name: moveUp;
+}
