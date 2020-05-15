@@ -773,3 +773,215 @@ ul, li {
 	-o-animation-name: moveUp;
 	animation-name: moveUp;
 }
+
+/* ======== News Page ========== */
+.page-template-news .site-logo img {
+  filter: invert(1);
+}
+
+.news-page {
+  padding: calc(90em / 16) calc(207em / 16);
+}
+
+.news-page .news-nav {
+  position: relative;
+}
+
+.news-page .news-label {
+  font-size: calc(100em / 16);
+  font-family: "Gotham-Thin";
+  position: absolute;
+}
+
+.news-page .news-label b {
+  font-family: "Gotham-Black";
+}
+
+.news-page .news-title {
+  text-align: center;
+  color: white;
+  text-shadow: rgb(232, 232, 232) -0.01em -0.01em 0px, rgb(232, 232, 232) 0.01em -0.01em 0px, rgb(232, 232, 232) -0.01em 0.01em 0px, rgb(232, 232, 232) 0.01em 0.01em 0px;
+  font-size: calc(236em / 16);
+  text-transform: uppercase;
+}
+
+.news-page .news-sub-title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.news-page .news-sub-title label {
+  font-size: calc(22em / 16);
+  font-family: "Gotham-Book";
+  margin-right: calc(36em / 16);
+  opacity: .7;
+}
+
+.news-page .news-sub-title img {
+  object-fit: contain;
+}
+
+.news-page .news-nav-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(66em / 16);
+}
+
+.news-page .news-nav-block ul {
+  display: flex;
+  margin-right: calc(75em / 16);
+}
+
+.news-page .news-nav-block li {
+  margin: 0 calc(18em / 16);
+}
+
+.news-page .news-nav-block li a {
+  color: black;
+  opacity: 0.7;
+  font-size: calc(19em / 16);
+  font-family: "Gotham-Light";
+}
+
+.news-page .news-nav-block li a.active {
+  font-family: "Gotham-Black";
+  opacity: 1;
+}
+
+.news-page .news-nav-block img {
+  object-fit: contain;
+}
+
+.news-page .news-story {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(70em / 16);
+}
+
+.news-page .news-story-item {
+  width: 28%;
+  border-bottom: solid 5px black;
+  padding-bottom: 30px;
+}
+
+/* .news-page .news-story-item:hover .news-story-arrow:after {
+  background-color: black;
+} */
+
+.news-page .news-story-item a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.news-page .news-story-item h2 {
+  font-family: "Gotham-Black";
+  font-size: calc(15em / 16);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.news-page .news-story-image {
+  position: relative;
+}
+
+.news-page .news-story-image label {
+  writing-mode: vertical-lr;
+  padding: 0.5em 0.5em 1.25em;
+  top: 0px;
+  position: absolute;
+  right: 1em;
+  font-size: calc(24em / 16);
+  color: white;
+  background-color: black;
+  font-family: "Gotham-Bold";
+}
+
+.news-page .news-story-item p {
+  font-family: "Gotham-Book";
+  opacity: 0.7;
+  font-size: calc(12em / 16);
+  margin-top: 10px;
+}
+
+.news-page .news-story-item img {
+  width: 100%;
+}
+
+.news-page .news-story-arrow p {
+  font-family: "Gotham-Light";
+  font-size: calc(15em / 16);
+  text-transform: uppercase;
+  text-align: right;
+  position: relative;
+  opacity: 1;
+}
+
+.news-page .news-story-arrow p b {
+  font-family: "Gotham-Black";
+}
+
+.news-page .news-story-arrow {
+  position: relative;
+  padding-right: 65px;
+  margin-top: calc(24em / 16);
+}
+
+.news-page .news-story-arrow:after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: solid 3px #000;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: -7px;
+}
+
+.news-page .news-story-arrow img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  object-fit: contain;
+  position: absolute;
+  right: 7px;
+  top: 3px;
+}
+
+
+.news-page .halfframe-all-news {
+  padding-left: calc(160em / 16);
+  display: flex;
+  align-items: flex-end;
+}
+
+.news-page .halfframe-all-news a {
+  font-size: calc(25em / 16);
+  color: black;
+  position: relative;
+  margin-left: 50px;
+  font-family: 'Gotham-Black';
+}
+
+.news-page .halfframe-all-news a:after {
+  content: '';
+  background-image: url('assets/images/right_arrow.png');
+  filter: invert(1);
+  position: absolute;
+  right: -50px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  border: solid 3px white;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.news-page .halfframe-all-news a:hover:after {
+  filter: invert(0);
+  background-color: black;
+  border-color: black;
+}
