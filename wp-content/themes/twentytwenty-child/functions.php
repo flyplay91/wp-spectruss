@@ -33,3 +33,43 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 }
+
+// Custom Post News
+function custom_news() {
+	$supports = array(
+	  'title',
+	  'editor',
+	  'author',
+	  'thumbnail',
+	  'custom-fields',
+	  'comments',
+	  'revisions',
+	  'post-formats',
+	);
+	$labels = array(
+	  'name' => _x('news', 'plural'),
+	  'singular_name' => _x('news', 'singular'),
+	  'menu_name' => _x('News', 'admin menu'),
+	  'name_admin_bar' => _x('News', 'admin bar'),
+	  'add_new' => _x('Add  News', 'add news'),
+	  'add_new_item' => __('Add New News'),
+	  'new_item' => __('New News'),
+	  'edit_item' => __('Edit News'),
+	  'view_item' => __('View News'),
+	  'all_items' => __('All News'),
+	  'search_items' => __('Search News'),
+	  'not_found' => __('No News found.'),
+	);
+	$args = array(
+	  'supports' => $supports,
+	  'labels' => $labels,
+	  'public' => true,
+	  'query_var' => true,
+	  'rewrite' => array('slug' => 'news-category'),
+	  'has_archive' => true,
+	  'hierarchical' => false,
+	  'taxonomies' => array( 'news_category' )
+	);
+	register_post_type('news-category', $args);
+  }
+  add_action('init', 'custom_news');
