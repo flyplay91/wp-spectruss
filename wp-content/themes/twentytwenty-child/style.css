@@ -1293,3 +1293,68 @@ ul, li {
   right: 0;
 }
 
+/* ======= Case Studies Page ======== */
+.case-studies-page .case-studies-hero {
+  height: calc(768em / 16);
+}
+
+.case-studies-page .case-studies-hero h2 {
+  font-size: calc(47em / 16);
+  font-family: "Gotham-Light";
+  position: absolute;
+  top: calc(33em / 16);
+  left: calc(40em / 16);
+  color: white;
+  letter-spacing: 2px;
+}
+
+.case-studies-page .case-studies-hero h2 b {
+  font-family: "Gotham-Black";
+}
+
+.case-studies-page .case-studies-hero-triangle {
+  width: 0;
+  height: 0;
+  border-top: calc(791em / 16) solid black;
+  border-right: calc(987em / 16) solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.case-studies-page .case-studies-hero img {
+  position: absolute;
+  left: calc(123em / 16);
+  top: calc(218em / 16);
+}
+
+.case-studies-page .case-studies-items {
+  display: flex;
+  padding: 0 calc(195em / 16);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: calc(-450em / 16);
+  z-index: 1;
+  position: relative;
+}
+
+.case-studies-page .case-study-item a {
+  color: black;
+  display: block;
+}
+
+.case-studies-page .case-study-item {
+  width: 45%;
+  margin-bottom: calc(75em / 16);
+}
+
+.case-studies-page .case-study-item img {
+  width: 100%;
+}
+
+.case-studies-page .case-study-item label {
+  font-size: calc(36em / 16);
+  font-family: "Gotham-Black";
+  margin-top: calc(16em / 16);
+}
+
