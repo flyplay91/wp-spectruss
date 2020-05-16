@@ -862,17 +862,15 @@ ul, li {
   display: flex;
   justify-content: space-between;
   margin-top: calc(70em / 16);
+  flex-wrap: wrap;
 }
 
 .news-page .news-story-item {
   width: 28%;
   border-bottom: solid 5px black;
   padding-bottom: 30px;
+  margin-bottom: calc(80em / 16);
 }
-
-/* .news-page .news-story-item:hover .news-story-arrow:after {
-  background-color: black;
-} */
 
 .news-page .news-story-item a {
   display: block;
@@ -885,6 +883,7 @@ ul, li {
   font-size: calc(15em / 16);
   margin-bottom: 15px;
   text-transform: uppercase;
+  height: 100px;
 }
 
 .news-page .news-story-image {
@@ -908,6 +907,10 @@ ul, li {
   opacity: 0.7;
   font-size: calc(12em / 16);
   margin-top: 10px;
+}
+
+.news-page .news-story-item p.trim-news {
+  height: 170px;
 }
 
 .news-page .news-story-item img {
@@ -1110,5 +1113,183 @@ ul, li {
 
 .single-news .single-news__pagination img {
   filter: invert(1);
+}
+
+/* ======== About Page ======== */
+.about-page .about-capability {
+  padding: calc(99em / 16) calc(84em / 16);
+  background-color: #ededed;
+}
+
+.about-page .about-capability h3 {
+  font-size: calc(36em / 16);
+  letter-spacing: 2px;
+  font-family: "Gotham-Black";
+}
+
+.about-page  .capability-items {
+  display: flex;
+  justify-content: center;
+  padding: calc(60em / 16) 0 calc(120em / 16);
+}
+
+.about-page .capability-item {
+  width: 22%;
+}
+
+.about-page .capability-item label {
+  font-family: "Gotham-Black";
+  font-size: calc(24em / 16);
+  letter-spacing: 2px;
+  margin-bottom: calc(20em / 16);
+}
+
+.about-page .capability-item li {
+  font-size: calc(15em / 16);
+  font-family: "Gotham-Book";
+  opacity: 0.7;
+  line-height: 2;
+}
+
+.about-page .capability-package {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-page .capability-package ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-page .capability-package ul a {
+  font-size: calc(36em / 16);
+  letter-spacing: 2px;
+  font-family: "Gotham-Black";
+  color: black;
+}
+
+.about-page .about-brands h3 {
+  font-size: calc(39em / 16);
+  font-family: "Gotham-Book";
+  letter-spacing: 2px;
+  padding: calc(36em / 16) 0 0 calc(44em / 16);
+  background-color: black;
+  color: white;
+}
+
+.about-page .about-brands h3 b {
+  font-family: "Gotham-Black";
+}
+
+.about-page .about-brand-items {
+  padding: calc(72em / 16) calc(111em / 16) 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
+.about-page .about-brand-items .about-brand-item {
+  width: 20%;
+  margin-bottom: calc(84em / 16);
+}
+
+.about-page .about-brand-items .about-brand-item img {
+  object-fit: contain;
+}
+
+.about-page .about-leadership h3 {
+  font-size: calc(39em / 16);
+  font-family: "Gotham-Book";
+  letter-spacing: 2px;
+  padding: calc(36em / 16) 0 0 calc(44em / 16);
+}
+
+.about-page .leadership-items {
+  padding: calc(20em / 16) calc(75em / 16) calc(183em / 16) calc(183em / 16);
+  background-color: black;
+  color: white;
+}
+
+.about-page .leadership-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(33em / 16);
+  align-items: flex-end;
+}
+
+.about-page .leadership-img {
+  width: calc(767em / 16);
+}
+
+.about-page .leadership-desc {
+  width: calc(1500em / 16);
+  margin-left: calc(180em / 16);
+  margin-bottom: calc(-50em / 16);
+}
+
+.about-page .leadership-desc h2 {
+  font-size: calc(36em / 16);
+  font-family: "Gotham-Book";
+  text-transform: uppercase;
+}
+
+.about-page .leadership-desc h2 b {
+  font-family: "Gotham-Black";
+}
+
+.about-page .leadership-desc label {
+  font-size: calc(24em / 16);
+  text-transform: uppercase;
+  font-family: "Gotham-Light";
+  margin: calc(8em / 16) 0 calc(20em / 16);
+}
+
+.about-page .leadership-desc p {
+  font-size: calc(13em / 16);
+  font-family: "Gotham-Book";
+}
+
+.about-page .about-leadership-thumb {
+  height: calc(903em / 16);
+  position: relative;
+}
+
+.about-page .leadership-thumb {
+  border: solid calc(15em / 16) #fff;
+  position: absolute;
+}
+
+.about-page .leadership-1 {
+  width: calc(600em / 16);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.about-page .leadership-2 {
+  width: calc(450em / 16);
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(75em / 16);
+}
+
+.about-page .leadership-3 {
+  right: calc(83em / 16);
+  top: calc(-120em / 16);
+}
+
+.about-page .leadership-4 {
+  width: calc(364em / 16);
+  top: calc(335em / 16);
+  left: calc(146em / 16);
+}
+
+.about-page .leadership-5 {
+  width: calc(450em / 16);
+  bottom: 0;
+  right: 0;
 }
 
