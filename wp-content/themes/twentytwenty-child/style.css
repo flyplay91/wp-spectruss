@@ -1358,3 +1358,155 @@ ul, li {
   margin-top: calc(16em / 16);
 }
 
+/* ======= Contact Page ========= */
+.contact-page .contact-page-hero {
+  display: flex;
+  justify-content: space-between;
+  height: calc(900em / 16);
+  background-color: black;
+}
+
+.contact-page .contact-hero-left {
+  width: calc(450em / 16);
+  position: relative;
+}
+
+.contact-page .contact-hero-left .right-halfframe {
+  right: calc(69em / 16);
+  position: absolute;
+  top: calc(113em / 16);
+  width: calc(78em / 16);
+  height: calc(78em / 16);
+}
+
+.contact-page .contact-hero-left .left-halfframe {
+  left: calc(75em / 16);
+  width: calc(78em / 16);
+  height: calc(78em / 16);
+  position: absolute;
+  bottom: calc(330em / 16);
+}
+
+.contact-page .contact-hero-left h2 {
+  font-size: calc(86em / 16);
+  font-family: "Gotham-Light";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  top: calc(40em / 16);
+  letter-spacing: 2px;
+}
+
+.contact-page .contact-hero-left h2 b {
+  font-family: "Gotham-Black";
+}
+
+.contact-page .contact-hero-right {
+  width: calc(990em / 16);
+}
+
+.contact-page .hero-dots {
+  width: calc(159em / 16);
+  position: absolute;
+  left: calc(75em / 16);
+  bottom: calc(64em / 16);
+}
+
+.contact-page .contact-page-form {
+  padding: calc(123em / 16) 0;
+  width: calc(1105em / 16);
+}
+
+.contact-page .contact-page-form .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-page .contact-page-form .grid .your-first-name,
+.contact-page .contact-page-form .grid .your-last-name,
+.contact-page .contact-page-form .grid .your-email,
+.contact-page .contact-page-form .grid .your-phone {
+  width: 33.333%;
+}
+
+.contact-page .contact-page-form .grid .your-company,
+.contact-page .contact-page-form .grid .your-message {
+  width: 66.666%;
+}
+
+.contact-page .contact-page-form .grid input {
+  height: calc(65em / 16);
+}
+
+.contact-page .contact-page-form .grid input,
+.contact-page .contact-page-form .grid textarea {
+  border: none;
+  font-size: calc(14em / 16);
+  font-family: "Gotham-Book";
+}
+
+.contact-page .contact-page-form .grid {
+  border-top: solid 5px black;
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
+}
+
+.contact-page .contact-page-form .grid .your-first-name input,
+.contact-page .contact-page-form .grid .your-last-name input,
+.contact-page .contact-page-form .grid .your-company input {
+  border-bottom: solid 5px black;
+  border-right: solid 5px black;
+}
+
+.contact-page .contact-page-form .grid .your-email input,
+.contact-page .contact-page-form .grid .your-phone input {
+  border-bottom: solid 5px black;
+}
+
+.contact-page .contact-page-form .grid textarea {
+  height: calc(285em / 16);
+  border-right: solid 5px black;
+}
+
+.contact-page .btn-contact-submit {
+  text-align: right;
+  margin-top: calc(39em / 16);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.contact-page .btn-contact-submit:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: solid 4px black;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+}
+
+.contact-page .btn-contact-submit:after {
+  content: '';
+  background-image: url('assets/images/right_arrow.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  position: absolute;
+  right: 2px;
+  top: 9px;
+}
+
+.contact-page .btn-contact-submit input {
+  font-family: "Gotham-Black";
+  font-size: calc(23em / 16);
+  padding: 0;
+  background-color: transparent;
+  color: black;
+}
+
