@@ -149,6 +149,19 @@ get_header();
 			</div>
 		</div>
 	</div>
+
+	<div class="home-page-form">
+		<h2>let's get to<b>work!</b></h2>
+		<div class="home-form-dots">
+			<div class="home-form">
+				<?php echo do_shortcode( '[contact-form-7 id="212858" title="Contact Form"]' ); ?>
+			</div>
+			<div class="home-dots">
+				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
+			</div>
+		</div>
+		
+    </div>
 </main>
 
 <?php get_footer(); ?>
