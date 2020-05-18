@@ -1318,6 +1318,10 @@ ul, li {
   object-fit: contain;
 }
 
+.about-page .about-leadership {
+  display: none;
+}
+
 .about-page .about-leadership h3 {
   font-size: calc(39em / 16);
   font-family: "Gotham-Book";

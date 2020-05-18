@@ -106,18 +106,22 @@ get_header();
 		<?php endwhile; ?>
 	<?php endif; ?>
 
-	<div class="home-page-form">
-		<h2>let's get to<b>work!</b></h2>
-		<div class="home-form-dots">
-			<div class="home-form">
-				<?php echo do_shortcode( '[contact-form-7 id="212858" title="Contact Form"]' ); ?>
-			</div>
-			<div class="home-dots">
-				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
+	<?php if( have_rows('contact_form') ): ?>
+		<?php while( have_rows('contact_form') ): the_row(); 
+		$contact_dot_image = get_sub_field('contact_form_dots'); ?>
+		<div class="home-page-form">
+			<h2><?php echo get_sub_field('contact_form_title'); ?></h2>
+			<div class="home-form-dots">
+				<div class="home-form">
+					<?php echo do_shortcode( get_sub_field('contact_form_short_code') ); ?>
+				</div>
+				<div class="home-dots">
+					<img src="<?php echo esc_url( $contact_dot_image['url'] ); ?>">
+				</div>
 			</div>
 		</div>
-		
-	</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
 	
 	<style>
 		.home-page .hero-dot {
