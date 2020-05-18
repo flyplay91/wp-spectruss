@@ -105,6 +105,7 @@ ul, li {
   display: flex;
   background-color: transparent;
   justify-content: space-between;
+  z-index: 11;
 }
 
 .header-logo {
