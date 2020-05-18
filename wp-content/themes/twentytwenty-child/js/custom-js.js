@@ -13,6 +13,8 @@ $(document).ready(function() {
 	});
 
 	$('body').on('click', '.news-nav-block li a', function() {
+		$('.news-nav-block li a').removeClass('active');
+		$(this).addClass('active');
 		var selectedNewsCat = $(this).data('value');
 		var ajaxUrl = $('#ajax-url').val();
 		$.ajax({

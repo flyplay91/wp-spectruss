@@ -32,7 +32,7 @@ get_header();
         <div class="news-nav-block">
             <input type="hidden" id="ajax-url" value="<?php echo get_stylesheet_directory_uri() ?>/ajax.php">
             <ul>
-                <li><a href="javascript: void(0)" data-value="all">all</a></li>
+                <li><a class="active" href="javascript: void(0)" data-value="all">all</a></li>
                 <li><a href="javascript: void(0)" data-value="<?php echo get_cat_ID('business'); ?>">business</a></li>
                 <li><a href="javascript: void(0)" data-value="<?php echo get_cat_ID('design'); ?>">design</a></li>
                 <li><a href="javascript: void(0)" data-value="<?php echo get_cat_ID('marketing'); ?>">marketing</a></li>
