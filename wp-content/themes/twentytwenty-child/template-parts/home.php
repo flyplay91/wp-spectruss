@@ -12,143 +12,99 @@ get_header();
 ?>
 
 <main class="home-page">
-	<div class="hero">
-		<div class="hero-triangle"></div>
-		<div class="hero-title">
-			<b>data</b><br>injected<br><b>creativity</b><br>delivering<br>winning<br><b>results</b>
-		</div>
-		<div class="hero-dot"></div>
-		<div class="hero-line"></div>
-		<div class="hero-video">
-			<iframe src="https://fast.wistia.net/embed/iframe/vaqg8fos83?videoFoam=true" title="Carter Testimonial Video" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe>
-		</div>
-		<div class="hero-sticker">
-			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/spectruss-icon.png">
-			<span class="first-text">award</span><span class="second-text"><b>WINNING</b></span><span class="third-text">AGENCY</span>
-		</div>
-	</div>
-
-	<div class="casestudies">
-		<div class="casestudy vert casestudy--liberty animatable moveUp first-case-study">
-			<div class="casestudy-content">
-				<h2 class="title-casestudy">Liberty Safe</h2>
-				<p class="desc-casestudy">Viral success across<br>multiple platforms</p>
-				<a href="" class="btn-casestudy">view case study</a>
+	<?php if( have_rows('hero_group') ): ?>
+		<?php while( have_rows('hero_group') ): the_row(); 
+			$dot_image = get_sub_field('hero_dot_image');
+			$line_image = get_sub_field('hero_line_image');
+			$sticker_logo = get_sub_field('hero_sticker_logo');
+		?>
+		<div class="hero">
+			<div class="hero-triangle"></div>
+			<div class="hero-title">
+				<?php echo get_sub_field('hero_title'); ?>
+			</div>
+			<div class="hero-dot"></div>
+			<div class="hero-line"></div>
+			<div class="hero-video">
+				<?php echo get_sub_field('hero_video'); ?>
+			</div>
+			<div class="hero-sticker">
+				<img src="<?php echo esc_url( $sticker_logo['url'] ); ?>">
+				<span class="first-text"><?php echo get_sub_field('hero_sticker_text_1'); ?></span><span class="second-text"><b><?php echo get_sub_field('hero_sticker_text_2'); ?></b></span><span class="third-text"><?php echo get_sub_field('hero_sticker_text_3'); ?></span>
 			</div>
 		</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
+	
+	<?php if ( have_rows( 'case_studies_group' ) ) : 
+		while ( have_rows( 'case_studies_group' ) ) : the_row(); ?>
+		<div class="casestudies">
+			<?php if ( have_rows( 'case_study' ) ) : 
+				while ( have_rows( 'case_study' ) ) : the_row();
+				$case_study_link = get_sub_field('case_study_button_link'); ?>
 
-		<div class="casestudy casestudy--royal animatable moveUp">
-			<div class="casestudy-content">
-				<h2 class="title-casestudy">Royal Highnies</h2>
-				<p class="desc-casestudy">25% increase<br>in online sales</p>
-				<a href="" class="btn-casestudy">view case study</a>
-			</div>
-		</div>
-
-		<div class="casestudy vert casestudy--hunter-museum animatable moveUp">
-			<div class="casestudy-content">
-				<h2 class="title-casestudy">Hunter Museum<br>Of American Art</h2>
-				<p class="desc-casestudy">Digital experience<br>for American art</p>
-				<a href="" class="btn-casestudy">view case study</a>
-			</div>
-		</div>
-
-		<div class="casestudy casestudy--brewski animatable moveUp">
-			<div class="casestudy-content">
-				<h2 class="title-casestudy">Brewski</h2>
-				<p class="desc-casestudy">Brand positioning<br>for a crowed marketplace</p>
-				<a href="" class="btn-casestudy">view case study</a>
-			</div>
-		</div>
-
-		<div class="casestudy vert casestudy--transcard animatable moveUp">
-			<div class="casestudy-content">
-				<h2 class="title-casestudy">Transcard</h2>
-				<p class="desc-casestudy">CRM meets<br>Digital Experience</p>
-				<a href="" class="btn-casestudy">view case study</a>
-			</div>
-		</div>
-
-		<div class="casestudy vert casestudy--lookout animatable moveUp">
-			<div class="casestudy-content">
-				<h2 class="title-casestudy">Lookout Wild<br>Film Festival</h2>
-				<p class="desc-casestudy">Uniting art, adventure<br>and community</p>
-				<a href="" class="btn-casestudy">view case study</a>
-			</div>
-		</div>
-
-		<div class="casestudy vert casestudy--about animatable moveUp">
-			<div class="casestudy-content">
-				<h2 class="title-casestudy">About Us</h2>
-				<p class="desc-casestudy">View all of our<br>full-service offerings</p>
-				<a href="" class="btn-casestudy">learn about spectruss</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="news">
-		<h2>what's<br><b>good?</b></h2>
-		<div class="news-block">
-			<div class="news-dot">
-				<div class="news-dot-item first--news">
-					<div class="dot-item">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots.png">
+				<div class="casestudy <?php if (get_sub_field('check_white_color') == true): ?>vert<?php endif;?> casestudy--liberty animatable moveUp <?php if (get_row_index() == 1): ?> first-case-study<?php endif; ?>">
+					<img src="<?php echo get_sub_field('case_study_background_image')['url']; ?>" />
+					<div class="casestudy-content">
+						<h2 class="title-casestudy"><?php echo get_sub_field('case_study_title'); ?></h2>
+						<div class="desc-casestudy"><?php echo get_sub_field('case_study_description'); ?></div>
+						<a href="<?php echo esc_url($case_study_link); ?>" class="btn-casestudy"><?php echo get_sub_field('case_study_button_text'); ?></a>
 					</div>
-					<div class="news-item">
-						<a href="">
-							<img class="news-item-img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_1.jpg">
-							<div class="news-item-date">6.18.19</div>
-							<div class="news-item-title">Tips to Strengthen<br>Your Brand’s Social<br>Media Presence</div>
-							<div class="news-item-arrow">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/right_arrow.png">
+				</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
+		
+	<?php if ( have_rows( 'news_group' ) ) : 
+		while ( have_rows( 'news_group' ) ) : the_row(); 
+		$half_frame_image = get_sub_field('news_half_frame');
+		$news_button_link = get_sub_field('news_all_news_button_link'); ?>				
+		<div class="news">
+			<h2><?php echo get_sub_field('news_title'); ?></h2>
+			<div class="news-block">
+				<div class="news-dot">
+					<?php if ( have_rows( 'news_repeater' ) ) : 
+						while ( have_rows( 'news_repeater' ) ) : the_row(); 
+							$news_post_dots = get_sub_field('news_post_dots'); 
+							$post_object = get_sub_field('news_post'); 
+							$post = $post_object;
+							setup_postdata( $post );?>
+							<div class="news-dot-item dot-item-<?php echo get_row_index() ?>">
+								<div class="dot-item">
+									<img src="<?php echo esc_url( $news_post_dots['url'] ); ?>">
+								</div>
+								<div class="news-item">
+									<a href="<?php the_permalink(); ?>">
+										<div class="news-item-img">
+											<?php echo get_the_post_thumbnail(); ?>
+										</div>
+										<div class="news-item-date"><?php echo get_the_date('n.j.Y'); ?></div>
+										<div class="news-item-title"><?php the_title(); ?></div>
+										<div class="news-item-arrow">
+											<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/right_arrow.png">
+										</div>
+									</a>
+								</div>
 							</div>
-						</a>
+							<?php wp_reset_postdata(); ?>
+						<?php endwhile; ?>
+					<?php endif; ?>
+					
+					<div class="halfframe-all-news">
+						<img src="<?php echo esc_url( $half_frame_image['url'] ); ?>">
+						<a href="<?php echo esc_url($news_button_link); ?>"><?php echo get_sub_field('news_all_news_button_text'); ?></a>
 					</div>
 				</div>
 
-				<div class="news-dot-item second--news">
-					<div class="dot-item">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots.png">
-					</div>
-					<div class="news-item">
-						<a href="">
-							<img class="news-item-img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_2.jpg">
-							<div class="news-item-date">6.05.19</div>
-							<div class="news-item-title">Spectruss Launches<br>CBD Product Line,<br>Kyte Life</div>
-							<div class="news-item-arrow">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/right_arrow.png">
-							</div>
-						</a>
-					</div>
+				<div class="dot-img">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots.png">
 				</div>
-
-				<div class="news-dot-item third--news">
-					<div class="dot-item">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots.png">
-					</div>
-					<div class="news-item">
-						<a href="">
-							<img class="news-item-img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_3.jpg">
-							<div class="news-item-date">5.31.19</div>
-							<div class="news-item-title">The Spectruss Creative<br>Team Welcomes<br>New Design Intern</div>
-							<div class="news-item-arrow">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/right_arrow.png">
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="halfframe-all-news">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/halfframe.png">
-					<a href="">All<br>News</a>
-				</div>
-			</div>
-
-			<div class="dot-img">
-				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots.png">
 			</div>
 		</div>
-	</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
 
 	<div class="home-page-form">
 		<h2>let's get to<b>work!</b></h2>
@@ -161,7 +117,16 @@ get_header();
 			</div>
 		</div>
 		
-    </div>
+	</div>
+	
+	<style>
+		.home-page .hero-dot {
+			background-image: url(<?php echo esc_url( $dot_image['url'] ); ?>);
+		}
+		.home-page .hero-line {
+			background-image: url(<?php echo esc_url( $line_image['url'] ); ?>);
+		}
+	</style>
 </main>
 
 <?php get_footer(); ?>

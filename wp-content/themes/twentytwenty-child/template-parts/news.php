@@ -52,7 +52,7 @@ get_header();
                             <a href="<?php the_permalink(); ?>">
                                 <h2><?php echo the_title(); ?></h2>
                                 <div class="news-story-image">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_1.jpg">
+                                    <?php echo get_the_post_thumbnail(); ?>
                                     <label><?php echo get_the_date('n.j.Y'); ?></label>
                                 </div>
                                 <p class="trim-news">

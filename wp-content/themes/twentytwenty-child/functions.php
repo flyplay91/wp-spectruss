@@ -55,10 +55,12 @@ function custom_filter_posts_func()
 	) );
 
 	$link = [];
+	$img = [];
 	
 	foreach ($postObj as $post) {
 		$link[] = get_permalink( $post->ID );
+		$img[] = get_the_post_thumbnail($post->ID, "large");
 	}
 	
-	wp_send_json(array($postObj, $link));
+	wp_send_json(array($postObj, $link, $img));
 }

@@ -24,19 +24,22 @@ $(document).ready(function() {
 			},
             success: function(data) {
 				jsonRes = JSON.parse(data);
+				
 				var posData = jsonRes[0];
 				var linkData = jsonRes[1];
+				var imgData = jsonRes[2];
 				$('.news-story .news-story-item').remove();
 				
 				$.each(posData, function(idx, val) {
 					// console.log(idx);
 					var link = linkData[idx];
+					var img = imgData[idx];
 					var html = '';
 					html += '<div class="news-story-item">';
                         html +=	'<a href="' + link + '">';
                             html +=	'<h2>' + val.post_title + '</h2>';
                                 html +=	'<div class="news-story-image">';
-                                    html += '<img src="http://local.wp-spectruss.com/wp-content/themes/twentytwenty-child/assets/images/news_1.jpg">';
+                                    html += img;
                                     	html +=	'<label>' + val.post_date + '</label>';
                                 html += '</div>';
                                 html +=	'<p class="trim-news">' + val.post_excerpt + '</p>';

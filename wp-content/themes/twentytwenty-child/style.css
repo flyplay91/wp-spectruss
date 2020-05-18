@@ -268,7 +268,6 @@ ul, li {
 }
 
 .home-page .hero-line {
-  background-image: url('assets/images/home_hero_right_line.png');
   width: calc(450em / 16);
   height: calc(450em / 16);
   position: absolute;
@@ -289,7 +288,6 @@ ul, li {
 }
 
 .home-page .hero-dot {
-  background-image: url('assets/images/home_hero_dots.png');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -377,34 +375,6 @@ ul, li {
   animation: 2s ease-out 0s 1 slideInFromLeft;
 }
 
-.home-page .casestudy--liberty {
-  background-image: url('assets/images/casestudy_liberty.jpg');
-}
-
-.home-page .casestudy--royal {
-  background-image: url('assets/images/casestudy_royal.jpg');
-}
-
-.home-page .casestudy--hunter-museum {
-  background-image: url('assets/images/casestudy_hunter_museum.jpg');
-}
-
-.home-page .casestudy--brewski {
-  background-image: url('assets/images/casestudy_brewski.jpg');
-}
-
-.home-page .casestudy--transcard {
-  background-image: url('assets/images/casestudy_transcard.jpg');
-}
-
-.home-page .casestudy--lookout {
-  background-image: url('assets/images/casestudy_lookout.jpg');
-}
-
-.home-page .casestudy--about {
-  background-image: url('assets/images/casestudy_aboutus.jpg');
-}
-
 .home-page .casestudy .title-casestudy {
   font-size: calc(39em / 16);
   text-transform: uppercase;
@@ -422,10 +392,13 @@ ul, li {
 .home-page .btn-casestudy {
   font-size: calc(24em / 16);
   color: black;
-  display: inline-block;
+  display: flex;
   margin-top: calc(18em / 16);
   border: solid 3px black;
-  padding: 9px 20px 13px 20px;
+  height: calc(32em / 16);
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
   position: relative;
   font-family: 'Gotham-Black';
 }
@@ -493,25 +466,40 @@ ul, li {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.home-page .news-dot-item.second--news {
+.home-page .news-dot-item.dot-item-2 {
   padding-top: calc(60em / 16);
 }
 
-.home-page .news-dot-item.third--news {
+.home-page .news-dot-item.dot-item-3 {
   padding-top: calc(120em / 16);
+}
+
+.home-page .dot-item {
+  width: 40%;
 }
 
 .home-page .news-item {
   border-bottom: solid 5px black;
   padding-bottom: 20px;
+  width: 60%;
+}
+
+.home-page .news-item .news-item-img > img {
+  height: calc(250em / 16);
+  object-fit: cover;
 }
 
 .home-page .news-item a {
   color: black;
   display: block;
   position: relative;
+}
+
+.home-page .news-item a > img {
+  width: 100%;
 }
 
 .home-page .news-item-date {
@@ -1013,6 +1001,11 @@ ul, li {
 
 .news-page .news-story-image {
   position: relative;
+}
+
+.news-page .news-story-image > img {
+  height: calc(300em / 16);
+  object-fit: cover;
 }
 
 .news-page .news-story-image label {
