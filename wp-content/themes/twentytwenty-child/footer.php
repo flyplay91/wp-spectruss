@@ -15,52 +15,38 @@
 		<footer id="site-footer" role="contentinfo" class="header-footer-group">
 			<div class="nav-block">
 				<div class="address-block">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_logo.png">
-					<p><a target="_blank" href="https://goo.gl/maps/xwKSUG1UKB2kabmq9">3800 St. Elmo Avenue<br>Suite 221<br>Chattanooga, Tennessee</a></p>
-					<p><a target="_blank" href="tel:4238008633">423.800.8633</a></p>
-					<p><a target="_blank" href="mailto:info@spectruss.com">info@spectruss.com</a></p>
+					<?php $footer_logo = get_field('footer_logo', 'option'); ?>
+					<img src="<?php echo esc_url(( $footer_logo )['url']); ?>">
+					<p><a target="_blank" href="<?php echo get_field('footer_address_link', 'option'); ?>"><?php echo get_field('footer_address', 'option'); ?></a></p>
+					<p><a target="_blank" href="tel:<?php echo get_field('footer_number_link', 'option'); ?>"><?php echo get_field('footer_number', 'option'); ?></a></p>
+					<p><a target="_blank" href="mailto:<?php echo get_field('footer_mail', 'option'); ?>"><?php echo get_field('footer_mail', 'option'); ?></a></p>
 					<ul>
-						<li>
-							<a target="_blank" href="https://www.linkedin.com/company/spectruss/">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-linkedin.png" alt="LinkedIn">
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.youtube.com/channel/UCUDuoHhVlU9yi1DmdGH9PNQ">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-youtube.png" alt="YouTube">
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.instagram.com/spectrussllc/">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-instagram.png" alt="Instagram">
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.facebook.com/SPECTRUSS/">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-facebook.png" alt="Facebook">
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://twitter.com/spectrussllc">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/header-twitter.png" alt="">
-							</a>
-						</li>
+						<?php if ( have_rows( 'footer_social', 'option' ) ) : 
+							while ( have_rows( 'footer_social', 'option' ) ) : the_row(); 
+							$footer_social_img = get_sub_field('social_icon', 'option'); ?>
+							<li>
+								<a target="_blank" href="<?php echo get_sub_field('social_link', 'option'); ?>">
+									<img src="<?php echo esc_url(( $footer_social_img )['url']); ?>">
+								</a>
+							</li>
+							<?php endwhile; ?>
+						<?php endif; ?>
 					</ul>
 				</div>
 				<ul class="main-nav">
-					<li><a href="">home</a></li>
-					<li><a href="">about</a></li>
-					<li><a href="">work</a></li>
-					<li><a href="">news</a></li>
-					<li><a href="">contact</a></li>
-					<li><a href="">now hiring</a></li>
+					<?php if ( have_rows( 'footer_menu_repeater', 'option' ) ) : 
+						while ( have_rows( 'footer_menu_repeater', 'option' ) ) : the_row(); 
+						$footer_nav_link = get_sub_field('footer_menu_link', 'option'); ?>
+						<li><a href="<?php echo esc_url($footer_nav_link); ?>"><?php echo get_sub_field('footer_menu_text', 'option'); ?></a></li>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</ul>
 			</div>
 			<div class="vertical-line"></div>
 			<div class="logos-block">
 				<div class="subscribe-logos">
 					<div class="mailchimp-form">
-						<p class="mailchimp-label">Stay connected with us and recieve the<br>latest news and marketing tips from our team.</p>
+						<p class="mailchimp-label"><?php echo get_field('footer_form_title', 'option'); ?></p>
 						<div id="mc_embed_signup">
 							<form action="https://spectruss.us7.list-manage.com/subscribe/post?u=c7bcb999719f01d8d64f79729&amp;id=4755d1cc1c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" noValidate>
 								<div id="mc_embed_signup_scroll">
@@ -81,14 +67,17 @@
 						</div>
 					</div>
 					<div class="logo-items">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_google.jpg">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_upcity.jpg">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_google_2.png">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_hubspot.png">
+						<?php if ( have_rows( 'footer_logo_repeater', 'option' ) ) : 
+							while ( have_rows( 'footer_logo_repeater', 'option' ) ) : the_row(); 
+							$footer_brand = get_sub_field('footer_logo_image', 'option'); ?>
+							<img src="<?php echo esc_url(( $footer_brand )['url']); ?>">
+							<?php endwhile; ?>
+						<?php endif; ?>
 					</div>
 				</div>
 				<div class="dots">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
+					<?php $footer_dot = get_field('footer_dot_image', 'option'); ?>
+					<img src="<?php echo esc_url(( $footer_dot )['url']); ?>">
 				</div>
 			</div>
 		</footer>
