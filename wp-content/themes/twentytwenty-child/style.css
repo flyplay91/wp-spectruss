@@ -1242,7 +1242,6 @@ ul, li {
 }
 
 .about-page .about-hero-triangle {
-  background-image: url('assets/images/about_hero.png');
   width: calc(990em / 16);
   position: absolute;
   top: 0;
@@ -1253,7 +1252,6 @@ ul, li {
 }
 
 .about-page .about-hero-line {
-  background-image: url('assets/images/home_hero_right_line.png');
   background: no-repeat;
   width: calc(411em / 16);
   height: calc(323em / 16);
@@ -1264,7 +1262,7 @@ ul, li {
   background-size: cover;
 }
 
-.about-page .about-hero > p {
+.about-page .about-hero .about-hero-content {
   font-family: "Gotham-Book";
   font-size: calc(23em / 16);
   max-width: calc(392em / 16);

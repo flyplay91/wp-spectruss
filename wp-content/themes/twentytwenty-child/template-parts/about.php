@@ -12,121 +12,72 @@ get_header();
 ?>
 
 <main class="about-page">
-    <div class="about-hero">
-        <div class="about-hero-triangle"></div>
-        <p>We are a group of adventurous, passion driven, young-at-heart individuals that take pride in the work that we produce<br>Our team of right brain creatives, mixed with left brain analyzers, provides the perfect recipe for our clients success.</p>
-        <div class="about-hero-line"></div>
-    </div>
-    <div class="about-capability">
-        <h3>capabilities</h3>
-        <div class="capability-items">
-            <div class="capability-item">
-                <label>strategize</label>
-                <ul>
-                    <li>Brand Positioning</li>
-                    <li>Brand Strategy</li>
-                    <li>Brand Development</li>
-                    <li>Market Research</li>
-                    <li>Content Strategy</li>
-                    <li>Digital Strategy</li>
-                    <li>Campaign Planning</li>
-                </ul>
+    <?php if( have_rows('hero_group') ): ?>
+		<?php while( have_rows('hero_group') ): the_row(); 
+			$hero_image = get_sub_field('hero_image');
+			$line_image = get_sub_field('hero_line_image');
+		?>
+        <div class="about-hero">
+            <div class="about-hero-triangle"></div>
+            <div class="about-hero-content"><?php echo get_sub_field('hero_content'); ?></div>
+            <div class="about-hero-line"></div>
+        </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+    
+    <?php if( have_rows('capabilities_group') ): ?>
+		<?php while( have_rows('capabilities_group') ): the_row(); ?>
+        <div class="about-capability">
+            <h3><?php echo get_sub_field('capabilities_title'); ?></h3>
+            <div class="capability-items">
+                <?php if ( have_rows( 'capabilities_repeater' ) ) : 
+                    while ( have_rows( 'capabilities_repeater' ) ) : the_row(); ?>
+                    <div class="capability-item">
+                        <label><?php echo get_sub_field('capability_title'); ?></label>
+                        <ul>
+                            <?php if ( have_rows( 'capability_repeater' ) ) : 
+                                while ( have_rows( 'capability_repeater' ) ) : the_row();?>
+                                <li><?php echo get_sub_field('capability_item'); ?></li>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </ul>
+                    </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
-            <div class="capability-item">
-                <label>create</label>
+            <div class="capability-package">
+                <h3><?php echo get_sub_field('packages_title'); ?></h3>
                 <ul>
-                    <li>Brand Identity</li>
-                    <li>Campaign Development</li>
-                    <li>Social Content</li>
-                    <li>Responsive Web</li>
-                    <li>Content Creation</li>
-                    <li>User Experience</li>
-                    <li>Video Production</li>
-                    <li>Direct Mail</li>
-                    <li>Email</li>
-                    <li>Outdoor</li>
-                    <li>Tradeshow</li>
-                </ul>
-            </div>
-            <div class="capability-item">
-                <label>implement</label>
-                <ul>
-                    <li>Full Stack Development</li>
-                    <li>E commerce Development</li>
-                    <li>Technology Integration</li>
-                    <li>Influencer Marketing</li>
-                    <li>Traditional Media Buying</li>
-                    <li>Digital Media Buying</li>
-                    <li>Paid Social</li>
-                    <li>SEM</li>
-                    <li>SEO</li>
-                    <li>CRM</li>
-                    <li>Public Relations</li>
-                    <li>Content Distribution</li>
-                </ul>
-            </div>
-            <div class="capability-item">
-                <label>analyze</label>
-                <ul>
-                    <li>Conversion Tracking</li>
-                    <li>Customer Behavior</li>
-                    <li>Audience Segmentation</li>
-                    <li>Customer Acquisition</li>
-                    <li>CTechnology Efficiency </li>
-                    <li>Sales Funnel</li>
-                    <li>Advanced E commerce Data</li>
-                    <li>Campaign Reporting</li>
+                    <?php if ( have_rows( 'packages_repeater' ) ) : 
+                        while ( have_rows( 'packages_repeater' ) ) : the_row();
+                        $package_link = get_sub_field('package_link'); ?>
+                        <li><a href="<?php echo esc_url($package_link); ?>"><?php echo get_sub_field('package_text'); ?></a></li>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
-        <div class="capability-package">
-            <h3>spectruss packages</h3>
-            <ul>
-                <li><a href="">vCMO</a></li>
-                <li><a href="">SPECTRUSS MD</a></li>
-            </ul>
+        <?php endwhile; ?>
+    <?php endif; ?>
+
+    <?php if( have_rows('brand_group') ): ?>
+		<?php while( have_rows('brand_group') ): the_row(); ?>
+        <div class="about-brands">
+            <h3><?php echo get_sub_field('brand_title'); ?></h3>
+            <div class="about-brand-items">
+                <?php if ( have_rows( 'brand_image_repeater' ) ) : 
+                    while ( have_rows( 'brand_image_repeater' ) ) : the_row();
+                    $brand_image = get_sub_field('brand_image'); ?>
+                    <div class="about-brand-item">
+                        <img src="<?php echo esc_url( $brand_image['url'] ); ?>">
+                    </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
         </div>
-    </div>
-    <div class="about-brands">
-        <h3>brands we’ve <b>worked</b> with</h3>
-        <div class="about-brand-items">
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_1.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_2.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_3.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_4.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_5.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_6.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_7.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_8.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_9.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_10.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_11.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_12.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_13.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_14.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_15.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_16.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_17.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_18.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_19.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_20.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_21.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_22.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_23.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_24.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_25.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_26.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_27.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_28.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_29.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_30.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_31.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_32.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_33.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_34.png"></div>
-            <div class="about-brand-item"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/brand_35.png"></div>
-        </div>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+
     <div class="about-leadership">
         <h3>leadership</h3>
         <div class="leadership-items">
@@ -184,23 +135,31 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="about-leadership-thumb">
-        <div class="leadership-thumb leadership-1">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/user_1.jpg">
-        </div>
-        <div class="leadership-thumb leadership-2">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/user_2.jpg">
-        </div>
-        <div class="leadership-thumb leadership-3">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/user_3.jpg">
-        </div>
-        <div class="leadership-thumb leadership-4">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/user_4.jpg">
-        </div>
-        <div class="leadership-thumb leadership-5">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/user_5.jpg">
-        </div>
-    </div>
+
+    <?php if( have_rows('leadership_thumb_group') ):
+        while( have_rows('leadership_thumb_group') ): the_row(); ?>
+        <div class="about-leadership-thumb">
+            <?php if ( have_rows( 'leadership_thumb_repeater' ) ) : 
+                while ( have_rows( 'leadership_thumb_repeater' ) ) : the_row(); 
+                $leadership_thumb_image = get_sub_field('leadership_thumb_image');?>
+                    <div class="leadership-thumb leadership-<?php echo get_row_index(); ?>">
+                        <img src="<?php echo esc_url( $leadership_thumb_image['url'] ); ?>">
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+
+    <style>
+        .about-page .about-hero-triangle {
+            background-image: url(<?php echo esc_url( $hero_image['url'] ); ?>);
+        }
+
+        .about-page .about-hero-line {
+            background-image: url(<?php echo esc_url( $line_image['url'] ); ?>);
+        }
+    </style>
 </main>
 
 
