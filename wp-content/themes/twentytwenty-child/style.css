@@ -1114,10 +1114,8 @@ ul, li {
 
 /* ======= Single News ======== */
 .single-news .single-news__inner {
-  padding: calc(90em / 16) calc(285em / 16) 0;
+  padding: calc(90em / 16) calc(145em / 16) 0;
 }
-
-
 
 .single-news .single-news-label {
   position: relative;
@@ -1126,10 +1124,10 @@ ul, li {
 }
 
 .single-news .single-news-label p {
-  color: white;
-  text-shadow: rgb(232, 232, 232) -0.01em -0.01em 0px, rgb(232, 232, 232) 0.01em -0.01em 0px, rgb(232, 232, 232) -0.01em 0.01em 0px, rgb(232, 232, 232) 0.01em 0.01em 0px;
+  color: transparent;
+  -webkit-text-stroke-width: 0.01em;
+  -webkit-text-stroke-color: rgb(168, 170, 173);
   font-size: calc(203em / 16);
-  text-transform: uppercase;
   line-height: 0.75;
   font-weight: 900;
   text-transform: uppercase;
@@ -1185,6 +1183,7 @@ ul, li {
 .single-news .single-news-desc p {
   font-size: calc(16em / 16);
   font-family: "Gotham-Book";
+  margin-bottom: calc(16em / 16);
 }
 
 .single-news .single-news__pagination {
@@ -1351,7 +1350,7 @@ ul, li {
 }
 
 .about-page .about-brand-items {
-  padding: calc(72em / 16) calc(111em / 16) 0;
+  padding: calc(125em / 16) calc(111em / 16) 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1366,6 +1365,7 @@ ul, li {
 
 .about-page .about-brand-items .about-brand-item img {
   object-fit: contain;
+  margin: 0 auto;
 }
 
 .about-page .about-leadership {
@@ -1614,7 +1614,28 @@ ul, li {
 .contact-page .contact-page-form .grid input,
 .contact-page .contact-page-form .grid textarea {
   border: none;
-  font-size: calc(14em / 16);
+  font-size: calc(16em / 16);
+  font-family: "Gotham-Book";
+}
+
+.contact-page .contact-page-form .grid input::-webkit-input-placeholder,
+.contact-page .contact-page-form .grid textarea::-webkit-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.contact-page .contact-page-form .grid input::-moz-placeholder,
+.contact-page .contact-page-form .grid textarea::-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.contact-page .contact-page-form .grid input:-ms-input-placeholder,
+.contact-page .contact-page-form .grid textarea:-ms-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.contact-page .contact-page-form .grid input:-moz-placeholder,
+.contact-page .contact-page-form .grid textarea:-moz-placeholder {
+  color: black;
   font-family: "Gotham-Book";
 }
 
