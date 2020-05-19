@@ -12,7 +12,11 @@ get_header();
 ?>
 
 <main class="about-page">
-    <div class="about-hero"></div>
+    <div class="about-hero">
+        <div class="about-hero-triangle"></div>
+        <p>We are a group of adventurous, passion driven, young-at-heart individuals that take pride in the work that we produce<br>Our team of right brain creatives, mixed with left brain analyzers, provides the perfect recipe for our clients success.</p>
+        <div class="about-hero-line"></div>
+    </div>
     <div class="about-capability">
         <h3>capabilities</h3>
         <div class="capability-items">

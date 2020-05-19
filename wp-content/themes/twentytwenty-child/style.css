@@ -1236,6 +1236,43 @@ ul, li {
 }
 
 /* ======== About Page ======== */
+.about-page .about-hero {
+  position: relative;
+  height: calc(774em / 16);
+}
+
+.about-page .about-hero-triangle {
+  background-image: url('assets/images/about_hero.png');
+  width: calc(990em / 16);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-page .about-hero-line {
+  background-image: url('assets/images/home_hero_right_line.png');
+  background: no-repeat;
+  width: calc(411em / 16);
+  height: calc(323em / 16);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-page .about-hero > p {
+  font-family: "Gotham-Book";
+  font-size: calc(23em / 16);
+  max-width: calc(392em / 16);
+  position: absolute;
+  left: 50%;
+  bottom: calc(167em / 16);
+}
+
 .about-page .about-capability {
   padding: calc(99em / 16) calc(84em / 16);
   background-color: #ededed;
@@ -1296,6 +1333,19 @@ ul, li {
   padding: calc(36em / 16) 0 0 calc(44em / 16);
   background-color: black;
   color: white;
+  position: relative;
+}
+
+.about-page .about-brands h3:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 103px 1920px 0 0;
+  border-color: #000000 transparent transparent transparent;
+  border-style: solid;
+  position: absolute;
+  left: 0;
+  bottom: -103px;
 }
 
 .about-page .about-brands h3 b {
