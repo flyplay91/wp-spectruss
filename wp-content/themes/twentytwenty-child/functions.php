@@ -36,9 +36,6 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
-
-
-
 add_action("wp_ajax_filter_posts", "custom_filter_posts_func");
 add_action("wp_ajax_nopriv_filter_posts", "custom_filter_posts_func");
 
@@ -64,3 +61,43 @@ function custom_filter_posts_func()
 	
 	wp_send_json(array($postObj, $link, $img));
 }
+
+// Case Studies Custom Post
+function case_studies() {
+	$supports = array(
+	  'title',
+	  'editor',
+	  'author',
+	  'thumbnail',
+	  'custom-fields',
+	  'comments',
+	  'revisions',
+	  'post-formats',
+	);
+	$labels = array(
+	  'name' => _x('casestudy', 'plural'),
+	  'singular_name' => _x('casestudy', 'singular'),
+	  'menu_name' => _x('Case Studies', 'admin menu'),
+	  'name_admin_bar' => _x('Case Studies', 'admin bar'),
+	  'add_new' => _x('Add Case Study', 'add casestudy'),
+	  'add_new_item' => __('Add New Case Study'),
+	  'new_item' => __('New Case Study'),
+	  'edit_item' => __('Edit Case Study'),
+	  'view_item' => __('View Case Study'),
+	  'all_items' => __('All Case Study'),
+	  'search_items' => __('Search Case Study'),
+	  'not_found' => __('No Case Study found.'),
+	);
+	$args = array(
+	  'supports' => $supports,
+	  'labels' => $labels,
+	  'public' => true,
+	  'query_var' => true,
+	  'rewrite' => array('slug' => 'casestudy'),
+	  'has_archive' => true,
+	  'hierarchical' => false,
+	  'taxonomies' => array( 'casestudy_category' )
+	);
+	register_post_type('casestudy', $args);
+  }
+  add_action('init', 'case_studies');
