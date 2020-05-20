@@ -1275,6 +1275,41 @@ ul, li {
   background-size: cover;
 }
 
+.about-page .about-hero .about-hero-sticker {
+  display: block;
+  width: calc(825em / 16);
+  height: calc(367em / 16);
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  left: 51.5%;
+  transform: translateX(-50%);
+}
+
+.about-page .about-hero .about-hero-content-1 {
+  font-size: calc(24em / 16);
+  font-family: "Gotham-Light";
+}
+
+.about-page .about-hero .about-hero-content-1 b {
+  font-family: "Gotham-Black";
+}
+
+.about-page .about-hero .about-hero-content-2 {
+  font-size: calc(24em / 16);
+  font-family: "Gotham-Light";
+  margin-top: calc(28em / 16);
+  margin-left: calc(23em / 16);
+  margin-bottom: calc(20em / 16);
+}
+
+.about-page .about-hero .about-hero-content-3 {
+  font-size: calc(24em / 16);
+  font-family: "Gotham-Light";
+  margin-left: calc(71em / 16);
+}
+
 .about-page .about-hero-line {
   background: no-repeat;
   width: calc(411em / 16);
@@ -1291,8 +1326,9 @@ ul, li {
   font-size: calc(23em / 16);
   max-width: calc(392em / 16);
   position: absolute;
-  left: 50%;
+  left: 57%;
   bottom: calc(167em / 16);
+  top: calc(141em / 16);
 }
 
 .about-page .about-capability {

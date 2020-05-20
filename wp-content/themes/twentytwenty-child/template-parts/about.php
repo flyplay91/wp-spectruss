@@ -15,11 +15,19 @@ get_header();
     <?php if( have_rows('hero_group') ): ?>
 		<?php while( have_rows('hero_group') ): the_row(); 
 			$hero_image = get_sub_field('hero_image');
-			$line_image = get_sub_field('hero_line_image');
+            $line_image = get_sub_field('hero_line_image');
+            $hero_sticker_image = get_sub_field('hero_sticker_image');
 		?>
         <div class="about-hero">
             <div class="about-hero-triangle"></div>
-            <div class="about-hero-content"><?php echo get_sub_field('hero_content'); ?></div>
+            <div class="about-hero-content">
+                <div class="about-hero-content-1">
+                    <?php echo get_sub_field('hero_content_1'); ?>
+                </div>
+                <div class="about-hero-content-2"><?php echo get_sub_field('hero_content_2'); ?></div>
+                <div class="about-hero-content-3"><?php echo get_sub_field('hero_content_3'); ?></div>
+            </div>
+            <div class="about-hero-sticker" style="background-image: url(<?php echo esc_url( $hero_sticker_image['url'] ) ?>"></div>
             <div class="about-hero-line"></div>
         </div>
         <?php endwhile; ?>

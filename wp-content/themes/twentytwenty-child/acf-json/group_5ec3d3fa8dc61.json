@@ -43,8 +43,46 @@
                 },
                 {
                     "key": "field_5ec3d44bdf0df",
-                    "label": "Hero Content",
-                    "name": "hero_content",
+                    "label": "Hero Content 1",
+                    "name": "hero_content_1",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5ec57b5682ed3",
+                    "label": "Hero Content 2",
+                    "name": "hero_content_2",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5ec57b6182ed4",
+                    "label": "Hero Content 3",
+                    "name": "hero_content_3",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -64,6 +102,30 @@
                     "key": "field_5ec3d456df0e0",
                     "label": "Hero Line Image",
                     "name": "hero_line_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5ec57bb74272d",
+                    "label": "Hero Sticker Image",
+                    "name": "hero_sticker_image",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -437,5 +499,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1589894716
+    "modified": 1590000578
 }
