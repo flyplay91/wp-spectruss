@@ -65,15 +65,22 @@ get_header();
 			<h2><?php echo get_sub_field('news_title'); ?></h2>
 			<div class="news-block">
 				<div class="news-dot">
-					<?php if ( have_rows( 'news_repeater' ) ) : 
-						while ( have_rows( 'news_repeater' ) ) : the_row(); 
-							$news_post_dots = get_sub_field('news_post_dots'); 
-							$post_object = get_sub_field('news_post'); 
-							$post = $post_object;
-							setup_postdata( $post );?>
-							<div class="news-dot-item dot-item-<?php echo get_row_index() ?>">
+				<?php
+					$postObj = get_posts( array(
+						'numberposts'	=> 3,
+						'post_type'      => 'post',
+						'post_status'    => 'publish',
+						'sort_order' => 'date',
+						'offset'         => 1
+					) );
+
+					if ( $postObj ) {
+						foreach ( $postObj as $post ) {
+							setup_postdata( $post );
+							?>
+							<div class="news-dot-item">
 								<div class="dot-item">
-									<img src="<?php echo esc_url( $news_post_dots['url'] ); ?>">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots.png">
 								</div>
 								<div class="news-item">
 									<a href="<?php the_permalink(); ?>">
@@ -88,9 +95,11 @@ get_header();
 									</a>
 								</div>
 							</div>
-							<?php wp_reset_postdata(); ?>
-						<?php endwhile; ?>
-					<?php endif; ?>
+						<?php
+						}
+						wp_reset_postdata();
+					}
+				?>	
 					
 					<div class="halfframe-all-news">
 						<img src="<?php echo esc_url( $half_frame_image['url'] ); ?>">
