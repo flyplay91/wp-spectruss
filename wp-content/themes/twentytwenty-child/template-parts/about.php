@@ -64,6 +64,7 @@ get_header();
 		<?php while( have_rows('brand_group') ): the_row(); ?>
         <div class="about-brands">
             <h3><?php echo get_sub_field('brand_title'); ?></h3>
+            <div class="triangle-clip"></div>
             <div class="about-brand-items">
                 <?php if ( have_rows( 'brand_image_repeater' ) ) : 
                     while ( have_rows( 'brand_image_repeater' ) ) : the_row();

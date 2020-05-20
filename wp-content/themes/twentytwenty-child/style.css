@@ -1333,16 +1333,10 @@ ul, li {
   position: relative;
 }
 
-.about-page .about-brands h3:after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-width: 103px 1920px 0 0;
-  border-color: #000000 transparent transparent transparent;
-  border-style: solid;
-  position: absolute;
-  left: 0;
-  bottom: -103px;
+.about-page .about-brands .triangle-clip {
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  height: 100px;
+  background-color: black;
 }
 
 .about-page .about-brands h3 b {
@@ -1739,9 +1733,8 @@ ul, li {
   color: white;
   font-size: calc(20em / 16);
   text-transform: uppercase;
-  padding: calc(12em / 16) calc(15em / 16);
+  padding: calc(12em / 16) calc(21em / 16) calc(12em / 16) calc(15em / 16);
   font-family: "Gotham-Black";
-  width: calc(150em / 16);
 }
 
 .single-case-study .hero-video h3 {

@@ -20,8 +20,10 @@ get_header();
             <img src="<?php echo esc_url( $hero_image['url'] ); ?>">
             <div class="hero-video">
                 <?php echo get_sub_field('case_study_hero_video_link'); ?>
-                <h2><?php echo get_sub_field('case_study_title'); ?></h2>
-                <h3>Case Study</h3>
+                <?php if (get_sub_field('case_study_hero_video_link') != ''): ?>
+                    <h2><?php echo get_sub_field('case_study_title'); ?></h2>
+                    <h3>Case Study</h3>
+                <?php endif; ?>
             </div>
         </div>
         <div class="case-study-items">
