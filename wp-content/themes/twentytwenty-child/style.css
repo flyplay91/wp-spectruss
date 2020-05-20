@@ -522,7 +522,7 @@ ul, li {
 .home-page .news-item-arrow {
   position: absolute;
   bottom: -11px;
-  right: 0;
+  right: -17px;
   width: 40px;
   height: 40px;
   display: flex;
