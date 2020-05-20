@@ -70,8 +70,7 @@ get_header();
 						'numberposts'	=> 3,
 						'post_type'      => 'post',
 						'post_status'    => 'publish',
-						'sort_order' => 'date',
-						'offset'         => 1
+						'sort_order' => 'date'
 					) );
 
 					if ( $postObj ) {
