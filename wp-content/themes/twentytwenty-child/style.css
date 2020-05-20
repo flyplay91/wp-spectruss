@@ -596,7 +596,7 @@ ul, li {
 }
 
 .home-page .home-form-dots {
-  max-width: calc(1067em / 16);
+  width: calc(1067em / 16);
   display: flex;
   justify-content: space-between;
 }
@@ -1730,7 +1730,7 @@ ul, li {
 }
 
 .case-studies-page .case-studies-form-dots {
-  max-width: calc(1067em / 16);
+  width: calc(1067em / 16);
   display: flex;
   justify-content: space-between;
 }
