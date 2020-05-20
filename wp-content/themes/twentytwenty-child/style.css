@@ -308,7 +308,8 @@ ul, li {
   line-height: calc(20em / 16);
 }
 
-.home-page .hero-title b {
+.home-page .hero-title b,
+.home-page .hero-title strong {
   font-family: 'Gotham-Black';
 }
 
@@ -395,12 +396,11 @@ ul, li {
   display: flex;
   margin-top: calc(18em / 16);
   border: solid 3px black;
-  height: calc(32em / 16);
   align-items: center;
   justify-content: center;
-  max-width: 300px;
   position: relative;
   font-family: 'Gotham-Black';
+  padding: 15px;
 }
 
 .home-page .btn-casestudy:before {
@@ -422,10 +422,10 @@ ul, li {
   display: block;
   position: absolute;
   width: calc(34em / 16);
-  height: calc(32em / 16);
   border: solid 3px black;
   right: calc(-34em / 16);
   top: -3px;
+  bottom: -3px;
   border-left: none;
 }
 
@@ -658,6 +658,32 @@ ul, li {
 .home-page .home-form .grid textarea {
   height: calc(285em / 16);
   border-right: solid 5px black;
+}
+
+.home-page .home-form .grid input:focus,
+.home-page .home-form .grid textarea:focus {
+  outline: none;
+} 
+
+.home-page .home-form .grid input::-webkit-input-placeholder,
+.home-page .home-form .grid textarea::-webkit-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.home-page .home-form .grid input::-moz-placeholder,
+.home-page .home-form .grid textarea::-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.home-page .home-form .grid input:-ms-input-placeholder,
+.home-page .home-form .grid textarea:-ms-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.home-page .home-form .grid input:-moz-placeholder,
+.home-page .home-form .grid textarea:-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
 }
 
 .home-page .btn-contact-submit {
@@ -983,6 +1009,8 @@ ul, li {
   border-bottom: solid 5px black;
   padding-bottom: 30px;
   margin-bottom: calc(80em / 16);
+  display: flex;
+  align-items: flex-end;
 }
 
 .news-page .news-story-item a {
@@ -996,7 +1024,6 @@ ul, li {
   font-size: calc(15em / 16);
   margin-bottom: 15px;
   text-transform: uppercase;
-  height: 100px;
 }
 
 .news-page .news-story-image {
@@ -1023,12 +1050,12 @@ ul, li {
 .news-page .news-story-item p {
   font-family: "Gotham-Book";
   opacity: 0.7;
-  font-size: calc(12em / 16);
+  font-size: calc(14em / 16);
   margin-top: 10px;
 }
 
 .news-page .news-story-item p.trim-news {
-  height: 170px;
+  height: 150px;
 }
 
 .news-page .news-story-item img {
@@ -1042,6 +1069,18 @@ ul, li {
   text-align: right;
   position: relative;
   opacity: 1;
+  margin-top: 0;
+  margin-right: 10px;
+}
+
+.news-page .news-story-arrow .news-story-arrow-icon {
+  width: 40px;
+  height: 40px;
+  border: solid 3px black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .news-page .news-story-arrow p b {
@@ -1049,31 +1088,17 @@ ul, li {
 }
 
 .news-page .news-story-arrow {
-  position: relative;
-  padding-right: 65px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin-top: calc(24em / 16);
 }
 
-.news-page .news-story-arrow:after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 50px;
-  border: solid 3px #000;
-  border-radius: 50%;
-  position: absolute;
-  right: 0;
-  top: -7px;
-}
-
 .news-page .news-story-arrow img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   filter: invert(1);
   object-fit: contain;
-  position: absolute;
-  right: 7px;
-  top: 3px;
 }
 
 
@@ -1308,12 +1333,17 @@ ul, li {
 .about-page .capability-package {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .about-page .capability-package ul {
   width: 50%;
   display: flex;
   justify-content: space-around;
+  margin-right: calc(50% - 50vw);
+  border: solid 3px black;
+  border-right: 0;
+  padding: 5px 20px 5px 0;
 }
 
 .about-page .capability-package ul a {
@@ -1421,6 +1451,7 @@ ul, li {
 .about-page .about-leadership-thumb {
   height: calc(903em / 16);
   position: relative;
+  display: none;
 }
 
 .about-page .leadership-thumb {
@@ -1457,6 +1488,128 @@ ul, li {
   width: calc(450em / 16);
   bottom: 0;
   right: 0;
+}
+
+.about-page .about-page-form {
+  padding-bottom: calc(90em / 16);
+}
+
+.about-page .about-page-form h2 {
+  font-size: calc(86em / 16);
+  font-family: "Gotham-Light";
+  padding-left: calc(8em / 16);
+  letter-spacing: 2px;
+  margin-bottom: calc(11em / 16);
+}
+
+.about-page .about-page-form h2 b {
+  font-family: "Gotham-Black";
+}
+
+.about-page .about-form-dots {
+  max-width: calc(1067em / 16);
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-page .about-form {
+  width: calc(775em / 16);
+}
+
+.about-page .about-dots img {
+  filter: invert(1);
+}
+
+.about-page .about-form .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-page .about-form .grid .your-first-name,
+.about-page .about-form .grid .your-last-name,
+.about-page .about-form .grid .your-email,
+.about-page .about-form .grid .your-phone {
+  width: 33.333%;
+}
+
+.about-page .about-form .grid .your-company,
+.about-page .about-form .grid .your-message {
+  width: 66.666%;
+}
+
+.about-page .about-form .grid input {
+  height: calc(65em / 16);
+}
+
+.about-page .about-form .grid input,
+.about-page .about-form .grid textarea {
+  border: none;
+  font-size: calc(14em / 16);
+  font-family: "Gotham-Book";
+}
+
+.about-page .about-form .grid {
+  border-top: solid 5px black;
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
+}
+
+.about-page .about-form .grid .your-first-name input,
+.about-page .about-form .grid .your-last-name input,
+.about-page .about-form .grid .your-company input {
+  border-bottom: solid 5px black;
+  border-right: solid 5px black;
+}
+
+.about-page .about-form .grid .your-email input,
+.about-page .about-form .grid .your-phone input {
+  border-bottom: solid 5px black;
+}
+
+.about-page .about-form .grid textarea {
+  height: calc(285em / 16);
+  border-right: solid 5px black;
+}
+
+.about-page .btn-contact-submit {
+  text-align: right;
+  margin-top: calc(39em / 16);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.about-page .btn-contact-submit:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: solid 4px black;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+}
+
+.about-page .btn-contact-submit:after {
+  content: '';
+  background-image: url('assets/images/right_arrow.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  position: absolute;
+  right: 2px;
+  top: 9px;
+}
+
+.about-page .btn-contact-submit input {
+  font-family: "Gotham-Black";
+  font-size: calc(23em / 16);
+  padding: 0;
+  background-color: transparent;
+  color: black;
 }
 
 /* ======= Case Studies Page ======== */
@@ -1524,6 +1677,154 @@ ul, li {
   margin-top: calc(16em / 16);
 }
 
+.case-studies-page .case-studies-page-form {
+  padding-bottom: calc(90em / 16);
+}
+
+.case-studies-page .case-studies-page-form h2 {
+  font-size: calc(86em / 16);
+  font-family: "Gotham-Light";
+  padding-left: calc(8em / 16);
+  letter-spacing: 2px;
+  margin-bottom: calc(11em / 16);
+}
+
+.case-studies-page .case-studies-page-form h2 b {
+  font-family: "Gotham-Black";
+}
+
+.case-studies-page .case-studies-form-dots {
+  max-width: calc(1067em / 16);
+  display: flex;
+  justify-content: space-between;
+}
+
+.case-studies-page .case-studies-form {
+  width: calc(775em / 16);
+}
+
+.case-studies-page .case-studies-dots img {
+  filter: invert(1);
+}
+
+.case-studies-page .case-studies-form .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.case-studies-page .case-studies-form .grid .your-first-name,
+.case-studies-page .case-studies-form .grid .your-last-name,
+.case-studies-page .case-studies-form .grid .your-email,
+.case-studies-page .case-studies-form .grid .your-phone {
+  width: 33.333%;
+}
+
+.case-studies-page .case-studies-form .grid .your-company,
+.case-studies-page .case-studies-form .grid .your-message {
+  width: 66.666%;
+}
+
+.case-studies-page .case-studies-form .grid input {
+  height: calc(65em / 16);
+}
+
+.case-studies-page .case-studies-form .grid input,
+.case-studies-page .case-studies-form .grid textarea {
+  border: none;
+  font-size: calc(14em / 16);
+  font-family: "Gotham-Book";
+}
+
+.case-studies-page .case-studies-form .grid {
+  border-top: solid 5px black;
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
+}
+
+.case-studies-page .case-studies-form .grid .your-first-name input,
+.case-studies-page .case-studies-form .grid .your-last-name input,
+.case-studies-page .case-studies-form .grid .your-company input {
+  border-bottom: solid 5px black;
+  border-right: solid 5px black;
+}
+
+.case-studies-page .case-studies-form .grid .your-email input,
+.case-studies-page .case-studies-form .grid .your-phone input {
+  border-bottom: solid 5px black;
+}
+
+.case-studies-page .case-studies-form .grid textarea {
+  height: calc(285em / 16);
+  border-right: solid 5px black;
+}
+
+.case-studies-page .case-studies-form .grid input:focus,
+.case-studies-page .case-studies-form .grid textarea:focus {
+  outline: none;
+} 
+
+.case-studies-page .case-studies-form .grid input::-webkit-input-placeholder,
+.case-studies-page .case-studies-form .grid textarea::-webkit-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.case-studies-page .case-studies-form .grid input::-moz-placeholder,
+.case-studies-page .case-studies-form .grid textarea::-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.case-studies-page .case-studies-form .grid input:-ms-input-placeholder,
+.case-studies-page .case-studies-form .grid textarea:-ms-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.case-studies-page .case-studies-form .grid input:-moz-placeholder,
+.case-studies-page .case-studies-form .grid textarea:-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+
+.case-studies-page .btn-contact-submit {
+  text-align: right;
+  margin-top: calc(39em / 16);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.case-studies-page .btn-contact-submit:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: solid 4px black;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+}
+
+.case-studies-page .btn-contact-submit:after {
+  content: '';
+  background-image: url('assets/images/right_arrow.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  position: absolute;
+  right: 2px;
+  top: 9px;
+}
+
+.case-studies-page .btn-contact-submit input {
+  font-family: "Gotham-Black";
+  font-size: calc(23em / 16);
+  padding: 0;
+  background-color: transparent;
+  color: black;
+}
+
 /* ======= Contact Page ========= */
 .contact-page .contact-page-hero {
   display: flex;
@@ -1582,6 +1883,16 @@ ul, li {
 .contact-page .contact-page-form {
   padding: calc(123em / 16) 0;
   width: calc(1105em / 16);
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-page .contact-form {
+  width: calc(775em / 16);
+}
+
+.contact-page .contact-form-dots img {
+  filter: invert(1);
 }
 
 .contact-page .contact-page-form .grid {
@@ -1831,6 +2142,29 @@ ul, li {
 
 /* ========= Responsive ============= */
 @media(max-width: 1440px) {
+  .home-page .home-form-dots,
+  .case-studies-page .case-studies-form-dots,
+  .contact-page .contact-page-form {
+    width: 96%;
+  }
+
+  .home-page .home-form,
+  .case-studies-page .case-studies-form,
+  .contact-page .contact-form {
+    width: 70%;
+  }
+
+  .home-page .btn-contact-submit:after,
+  .case-studies-page .btn-contact-submit:after,
+  .contact-page .btn-contact-submit:after {
+    right: 0px;
+    top: 5px;
+  }
+
+  #site-footer .mailchimp-form .mailchimp-label {
+    font-size: calc(14em / 16);
+  }
+
   .single-news .single-news__inner {
     padding: calc(90em / 16) calc(117em / 17);
   }

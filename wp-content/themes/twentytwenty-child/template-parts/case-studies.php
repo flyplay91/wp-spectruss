@@ -17,6 +17,7 @@ get_header();
         <h2>our<br><b>work</b></h2>
         <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
     </div>
+
     <div class="case-studies-items">
         <div class="case-study-item">
             <a href="">
@@ -115,7 +116,21 @@ get_header();
             </a>
         </div>
 
+    
     </div>
+
+    
+		<div class="case-studies-page-form">
+			<h2>let's get to <b>work</h2>
+			<div class="case-studies-form-dots">
+				<div class="case-studies-form">
+					<?php echo do_shortcode('[contact-form-7 id="212858" title="Contact Form"]'); ?>
+				</div>
+				<div class="case-studies-dots">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
+				</div>
+			</div>
+		</div>
 </main>
 
 <?php get_footer(); ?>

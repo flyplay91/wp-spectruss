@@ -62,7 +62,9 @@ get_header();
                                 </p>
                                 <div class="news-story-arrow">
                                     <p>Go To <b>Story</b></p>
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/right_arrow.png">
+                                    <div class="news-story-arrow-icon">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/right_arrow.png">
+                                    </div>
                                 </div>
                             </a>
                         </div>

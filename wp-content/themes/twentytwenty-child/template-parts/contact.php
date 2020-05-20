@@ -24,7 +24,12 @@ get_header();
         </div>
     </div>
     <div class="contact-page-form">
-        <?php echo do_shortcode( '[contact-form-7 id="212858" title="Contact Form"]' ); ?>
+        <div class="contact-form">
+            <?php echo do_shortcode( '[contact-form-7 id="212858" title="Contact Form"]' ); ?>
+        </div>
+        <div class="contact-form-dots">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
+        </div>
     </div>
 </main>
 
