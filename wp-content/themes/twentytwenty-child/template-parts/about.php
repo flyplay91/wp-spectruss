@@ -160,6 +160,23 @@ get_header();
         <?php endwhile; ?>
     <?php endif; ?>
 
+    <?php if( have_rows('contact_form_group') ): ?>
+		<?php while( have_rows('contact_form_group') ): the_row(); 
+		$contact_dot_image = get_sub_field('contact_form_dots'); ?>
+		<div class="about-page-form">
+			<h2><?php echo get_sub_field('contact_form_title'); ?></h2>
+			<div class="about-form-dots">
+				<div class="about-form">
+					<?php echo do_shortcode( get_sub_field('contact_form_short_code') ); ?>
+				</div>
+				<div class="about-dots">
+					<img src="<?php echo esc_url( $contact_dot_image['url'] ); ?>">
+				</div>
+			</div>
+		</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
+
     <style>
         .about-page .about-hero-triangle {
             background-image: url(<?php echo esc_url( $hero_image['url'] ); ?>);

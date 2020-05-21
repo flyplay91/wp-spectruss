@@ -443,8 +443,6 @@ ul, li {
   font-family: 'Gotham-Bold';
 }
 
-
-
 .home-page .news-block {
   display: flex;
   margin-top: calc(30em / 16);
@@ -517,6 +515,7 @@ ul, li {
   font-size: calc(16em / 16);
   margin-top: calc(18em / 16);
   font-family: 'Gotham-Bold';
+  padding-right: 20px;
 }
 
 .home-page .news-item-arrow {
@@ -1543,7 +1542,7 @@ ul, li {
 }
 
 .about-page .about-form-dots {
-  max-width: calc(1067em / 16);
+  width: calc(1067em / 16);
   display: flex;
   justify-content: space-between;
 }
@@ -1605,6 +1604,32 @@ ul, li {
 .about-page .about-form .grid textarea {
   height: calc(285em / 16);
   border-right: solid 5px black;
+}
+
+.about-page .about-form .grid input:focus,
+.about-page .about-form .grid textarea:focus {
+  outline: none;
+} 
+
+.about-page .about-form .grid input::-webkit-input-placeholder,
+.about-page .about-form .grid textarea::-webkit-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.about-page .about-form .grid input::-moz-placeholder,
+.about-page .about-form .grid textarea::-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.about-page .about-form .grid input:-ms-input-placeholder,
+.about-page .about-form .grid textarea:-ms-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.about-page .about-form .grid input:-moz-placeholder,
+.about-page .about-form .grid textarea:-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
 }
 
 .about-page .btn-contact-submit {
@@ -2180,19 +2205,22 @@ ul, li {
 @media(max-width: 1440px) {
   .home-page .home-form-dots,
   .case-studies-page .case-studies-form-dots,
-  .contact-page .contact-page-form {
+  .contact-page .contact-page-form,
+  .about-page .about-form-dots {
     width: 96%;
   }
 
   .home-page .home-form,
   .case-studies-page .case-studies-form,
-  .contact-page .contact-form {
+  .contact-page .contact-form,
+  .about-page .about-form {
     width: 70%;
   }
 
   .home-page .btn-contact-submit:after,
   .case-studies-page .btn-contact-submit:after,
-  .contact-page .btn-contact-submit:after {
+  .contact-page .btn-contact-submit:after,
+  .about-page .btn-contact-submit:after {
     right: 0px;
     top: 5px;
   }
