@@ -12,47 +12,68 @@ get_header();
 
 <?php if( have_rows('case_studies_group') ): ?>
     <?php while( have_rows('case_studies_group') ): the_row(); 
-        $hero_image = get_sub_field('case_study_hero_image');
+        $hero_image = get_sub_field('hero_image');
+        $hero_sticker_image = get_sub_field('hero_sticker_image');
+        $solution_image = get_sub_field('solution_image');
     ?>
 
     <main class="single-case-study">
         <div class="case-study-hero">
-            <img src="<?php echo esc_url( $hero_image['url'] ); ?>">
+            <img class="hero-main-img" src="<?php echo esc_url( $hero_image['url'] ); ?>">
+            <div class="hero-triangle" style="background-color: <?php echo get_sub_field('hero_triangle_background_color'); ?>"></div>
+            <div class="hero-title">
+                <?php echo get_sub_field('hero_title'); ?>
+            </div>
+            <?php if (get_sub_field('hero_video_link')): ?>
             <div class="hero-video">
-                <?php echo get_sub_field('case_study_hero_video_link'); ?>
-                <?php if (get_sub_field('case_study_hero_video_link') != ''): ?>
-                    <h2><?php echo get_sub_field('case_study_title'); ?></h2>
-                    <h3>Case Study</h3>
-                <?php endif; ?>
+                <?php echo get_sub_field('hero_video_link'); ?>
+            </div>
+            <?php endif; ?>
+            <img class="hero-sticker" src="<?php echo esc_url( $hero_sticker_image['url'] ); ?>">
+        </div>
+
+        <div class="case-study-challenga">
+            <h3><?php echo get_sub_field('challenge_title'); ?></h3>
+            <a href="<?php echo get_sub_field('challenge_link'); ?>" style="background-color: <?php echo get_sub_field('hero_triangle_background_color'); ?>">The challenga</a>
+            <p><?php echo get_sub_field('challenge_content'); ?></p>
+        </div>
+
+        <div class="case-study-solution">
+            <img src="<?php echo esc_url( $solution_image['url'] ); ?>">
+            <div class="solution-content">
+                <h3><?php echo get_sub_field('solution_title'); ?></h3>
+                <div class="solution-content__inner">
+                    <div class="solution-content-text"><?php echo get_sub_field('solution_left_text'); ?></div>
+                    <div class="solution-content-text"><?php echo get_sub_field('solution_right_text'); ?></div>
+                </div>
             </div>
         </div>
+
         <div class="case-study-items">
             <?php if ( have_rows( 'case_studies_repeater' ) ) : 
                 while ( have_rows( 'case_studies_repeater' ) ) : the_row();
                 $case_study_image = get_sub_field('case_study_item_image');
                 $case_study_image_mobi = get_sub_field('case_study_item_mobile_image'); ?>
                     <div class="case-study-item case-study-item-<?php echo get_row_index(); ?>">
-                        <div class="styled-text-content <?php if (get_sub_field('case_study_item_white_color_or_black') == true): ?>white-color<?php endif; ?> <?php if (get_sub_field('case_study_item_vertical_content_or_horiontal') == true): ?>vert<?php endif; ?>">
-                            <div class="left">
-                                <p class="num">0<?php echo get_row_index(); ?>.</p>
-                                <div class="heading">
-                                    <div class="line"></div>
-                                    <h2><?php echo get_sub_field('case_study_item_title'); ?></h2>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <p><?php echo get_sub_field('case_study_item_content'); ?></p>
-                            </div>
-                        </div>
+                        <img src="<?php echo esc_url( $case_study_image['url'] ) ?>">
                     </div>
-                    <style>
-                        .single-case-study .case-study-item-<?php echo get_row_index(); ?> {
-                            background-image: url(<?php echo esc_url( $case_study_image['url'] ); ?>);
-                        }
-                    </style>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
+
+        
+            <div class="single-case-study-page-form">
+                <h2><?php echo get_sub_field('case_study_contact_form_title') ?></h2>
+                <div class="single-case-study-form-dots">
+                    <div class="single-case-study-form">
+                        <?php echo do_shortcode( get_sub_field('case_study_contact_form_shortcode') ); ?>
+                    </div>
+                    <div class="single-case-study-dots">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
+                    </div>
+                </div>
+            </div>
+            
         
     </main>
 

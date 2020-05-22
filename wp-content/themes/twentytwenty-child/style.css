@@ -1138,7 +1138,7 @@ ul, li {
 
 /* ======= Single News ======== */
 .single-news .single-news__inner {
-  padding: calc(90em / 16) calc(145em / 16) 0;
+  padding: calc(90em / 16) calc(100em / 16) 0;
 }
 
 .single-news .single-news-label {
@@ -1170,7 +1170,7 @@ ul, li {
 .single-news .single-news-img-title {
   margin-top: calc(-60em / 16);
   position: relative;
-  height: calc(504em / 16);
+  height: calc(604em / 16);
 }
 
 .single-news .single-news-img-title img {
@@ -1180,9 +1180,9 @@ ul, li {
 }
 
 .single-news .single-news-img-title h2 {
-  width: calc(120em / 16);
+  width: calc(150em / 16);
   position: absolute;
-  top: calc(30em / 16);
+  top: calc(20em / 16);
   right: 0;
   background-color: white;
   padding: calc(4em / 16) calc(8em / 16);
@@ -1196,7 +1196,7 @@ ul, li {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: calc(664em / 16);
+  max-width: calc(1000em / 16);
 }
 
 .single-news .single-news-desc {
@@ -2076,128 +2076,259 @@ ul, li {
 
 /* ========= Single Case Study ========== */
 .single-case-study .case-study-hero {
-  height: calc(960em / 16);
   position: relative;
 }
 
-.single-case-study .case-study-hero > img {
+.single-case-study .hero-main-img {
   width: 100%;
+}
+
+.single-case-study .hero-triangle {
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  position: absolute;
+  top: 0;
+  width: calc(711em / 16);
+  height: calc(567em / 16);
 }
 
 .single-case-study .hero-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 53%;
+  top: 55%;
   transform: translate(-50%, -50%);
-  width: calc(915em / 16);
+  width: calc(756em / 16);
+  height: calc(426em / 16);
+  z-index: 1;
 }
 
-.single-case-study .hero-video iframe {
-  border: 10px solid black;
-  height: calc(525em / 16) !important;
-}
-
-.single-case-study .hero-video h2 {
+.single-case-study .hero-title {
+  font-size: calc(47em / 16);
+  font-family: "Gotham-Black";
+  top: calc(36em / 16);
   position: absolute;
-  top: -12%;
-  right: 10%;
-  background-color: black;
+  left: calc(30em / 16);
   color: white;
-  font-size: calc(20em / 16);
+}
+
+.single-case-study .hero-sticker {
+  width: calc(528em / 16);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.single-case-study .case-study-challenga {
+  font-size: calc(15em / 16);
+  font-family: "Gotham-Book";
+  padding: calc(53em / 16) calc(413em / 16) calc(78em / 16) calc(264em / 16);
+}
+
+.single-case-study .case-study-challenga h3 {
+  font-size: calc(27em / 16);
   text-transform: uppercase;
-  padding: calc(12em / 16) calc(21em / 16) calc(12em / 16) calc(15em / 16);
   font-family: "Gotham-Black";
 }
 
-.single-case-study .hero-video h3 {
-  position: absolute;
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: vertical-rl;
-  bottom: 30%;
-  left: -2.5%;
+.single-case-study .case-study-challenga a {
   font-size: calc(16em / 16);
-  text-transform: uppercase;
-  background-color: black;
   color: white;
-  padding: calc(15em / 16);
-  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Gotham-Black";
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 30px 0;
 }
 
-.single-case-study .case-study-item {
-  height: calc(960em / 16);
-  background-repeat: no-repeat;
-  background-size: cover;
+.single-case-study .case-study-solution {
+  background-color: #e3302c;
+  color: white;
   position: relative;
+  height: calc(780em / 16);
 }
 
-.single-case-study .styled-text-content {
+.single-case-study .case-study-solution img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: calc(130em / 16);
+  left: calc(49em / 16);
+}
+
+.single-case-study .case-study-solution .solution-content {
+  width: calc(930em / 16);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.single-case-study .case-study-solution .solution-content h3 {
+  font-family: "Gotham-Black";
+  font-size: calc(17em / 16);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+.single-case-study .case-study-solution .solution-content__inner {
   display: flex;
-}
-
-.single-case-study .styled-text-content.vert {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.single-case-study .styled-text-content.vert .right {
-  margin-top: 2vw;
-}
-
-.single-case-study .styled-text-content .left {
-  display: flex;
-  flex-direction: column;
-  margin-right: 2vw;
-}
-
-.single-case-study .styled-text-content .num {
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 0.25vw;
-  font-size: calc(29em / 16);
-}
-
-.single-case-study .styled-text-content .heading {
-  display: flex;
-  -webkit-box-pack: justify;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.single-case-study .styled-text-content .heading .line {
-  background-color: black;
-  width: 0.25vw;
+.single-case-study .case-study-solution .solution-content-text {
+  width: 41%;
+  font-size: calc(15em / 16);
+  font-family: "Gotham-Book";
+  line-height: 1.5;
 }
 
-.single-case-study .styled-text-content .heading h2 {
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: vertical-rl;
-  font-family: "Gotham-Bold";
+.single-case-study .case-study-item img {
+  width: 100%;
+}
+
+.single-case-study-page-form {
+  padding-bottom: calc(90em / 16);
+  padding-top: calc(90em / 16);
+}
+
+.single-case-study-page-form h2 {
+  font-size: calc(86em / 16);
+  font-family: "Gotham-Light";
+  padding-left: calc(8em / 16);
   letter-spacing: 2px;
-  line-height: calc(17em / 16);
+  margin-bottom: calc(11em / 16);
 }
 
-.single-case-study .styled-text-content .right {
+.single-case-study-page-form .single-case-study-form-dots {
+  width: calc(1067em / 16);
   display: flex;
-  flex-direction: column;
-  -webkit-box-pack: end;
+  justify-content: space-between;
+}
+
+.single-case-study-page-form .single-case-study-form {
+  width: calc(775em / 16);
+}
+
+.single-case-study-page-form .single-case-study-dots img {
+  filter: invert(1);
+}
+
+.single-case-study-page-form .single-case-study-form .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single-case-study-page-form .single-case-study-form .grid .your-first-name,
+.single-case-study-page-form .single-case-study-form .grid .your-last-name,
+.single-case-study-page-form .single-case-study-form .grid .your-email,
+.single-case-study-page-form .single-case-study-form .grid .your-phone {
+  width: 33.333%;
+}
+
+.single-case-study-page-form .single-case-study-form .grid .your-company,
+.single-case-study-page-form .single-case-study-form .grid .your-message {
+  width: 66.666%;
+}
+
+.single-case-study-page-form .single-case-study-form .grid input {
+  height: calc(65em / 16);
+}
+
+.single-case-study-page-form .single-case-study-form .grid input,
+.single-case-study-page-form .single-case-study-form .grid textarea {
+  border: none;
+  font-size: calc(14em / 16);
+  font-family: "Gotham-Book";
+}
+
+.single-case-study-page-form .single-case-study-form .grid {
+  border-top: solid 5px black;
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
+}
+
+.single-case-study-page-form .single-case-study-form .grid .your-first-name input,
+.single-case-study-page-form .single-case-study-form .grid .your-last-name input,
+.single-case-study-page-form .single-case-study-form .grid .your-company input {
+  border-bottom: solid 5px black;
+  border-right: solid 5px black;
+}
+
+.single-case-study-page-form .single-case-study-form .grid .your-email input,
+.single-case-study-page-form .single-case-study-form .grid .your-phone input {
+  border-bottom: solid 5px black;
+}
+
+.single-case-study-page-form .single-case-study-form .grid textarea {
+  height: calc(285em / 16);
+  border-right: solid 5px black;
+}
+
+.single-case-study-page-form .single-case-study-form .grid input:focus,
+.single-case-study-page-form .single-case-study-form .grid textarea:focus {
+  outline: none;
+} 
+
+.single-case-study-page-form .single-case-study-form .grid input::-webkit-input-placeholder,
+.single-case-study-page-form .single-case-study-form .grid textarea::-webkit-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.single-case-study-page-form .single-case-study-form .grid input::-moz-placeholder,
+.single-case-study-page-form .single-case-study-form .grid textarea::-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.single-case-study-page-form .single-case-study-form .grid input:-ms-input-placeholder,
+.single-case-study-page-form .single-case-study-form .grid textarea:-ms-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.single-case-study-page-form .single-case-study-form .grid input:-moz-placeholder,
+.single-case-study-page-form .single-case-study-form .grid textarea:-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+
+.single-case-study-page-form .btn-contact-submit {
+  text-align: right;
+  margin-top: calc(39em / 16);
+  position: relative;
+  display: flex;
   justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
 }
 
-.single-case-study .styled-text-content .right p {
-  width: 20vw;
-  font-size: 1vw;
-  line-height: 1.3;
+.single-case-study-page-form .btn-contact-submit:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: solid 4px black;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
 }
 
-.single-case-study .styled-text-content.white-color {
-  color: white;
+.single-case-study-page-form .btn-contact-submit:after {
+  content: '';
+  background-image: url('assets/images/right_arrow.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  position: absolute;
+  right: 2px;
+  top: 9px;
 }
 
-.single-case-study .styled-text-content.white-color .line {
-  background-color: white;
+.single-case-study-page-form .btn-contact-submit input {
+  font-family: "Gotham-Black";
+  font-size: calc(23em / 16);
+  padding: 0;
+  background-color: transparent;
+  color: black;
 }
 
 
