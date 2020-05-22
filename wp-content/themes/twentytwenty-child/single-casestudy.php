@@ -38,7 +38,7 @@ get_header();
             <p><?php echo get_sub_field('challenge_content'); ?></p>
         </div>
 
-        <div class="case-study-solution">
+        <div class="case-study-solution" style="background-color: <?php echo get_sub_field('solution_background_color'); ?>">
             <img src="<?php echo esc_url( $solution_image['url'] ); ?>">
             <div class="solution-content">
                 <h3><?php echo get_sub_field('solution_title'); ?></h3>
@@ -48,6 +48,12 @@ get_header();
                 </div>
             </div>
         </div>
+
+        <?php if (get_sub_field('case_study_video_1')): ?>
+            <div class="case-study-video-1">
+                <?php echo get_sub_field('case_study_video_1'); ?>
+            </div>
+        <?php endif; ?>
 
         <div class="case-study-items">
             <?php if ( have_rows( 'case_studies_repeater' ) ) : 
@@ -62,17 +68,17 @@ get_header();
         </div>
 
         
-            <div class="single-case-study-page-form">
-                <h2><?php echo get_sub_field('case_study_contact_form_title') ?></h2>
-                <div class="single-case-study-form-dots">
-                    <div class="single-case-study-form">
-                        <?php echo do_shortcode( get_sub_field('case_study_contact_form_shortcode') ); ?>
-                    </div>
-                    <div class="single-case-study-dots">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
-                    </div>
+        <div class="single-case-study-page-form">
+            <h2><?php echo get_sub_field('case_study_contact_form_title') ?></h2>
+            <div class="single-case-study-form-dots">
+                <div class="single-case-study-form">
+                    <?php echo do_shortcode( get_sub_field('case_study_contact_form_shortcode') ); ?>
+                </div>
+                <div class="single-case-study-dots">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/footer_dots.png">
                 </div>
             </div>
+        </div>
             
         
     </main>
