@@ -2151,6 +2151,7 @@ ul, li {
   top: 50%;
   transform: translateY(-50%);
   left: calc(49em / 16);
+  height: calc(676em / 16);
 }
 
 .single-case-study .case-study-solution .solution-content {
@@ -2256,6 +2257,10 @@ ul, li {
   padding-left: calc(8em / 16);
   letter-spacing: 2px;
   margin-bottom: calc(11em / 16);
+}
+
+.single-case-study-page-form h2 b {
+  font-family: "Gotham-Black";
 }
 
 .single-case-study-page-form .single-case-study-form-dots {

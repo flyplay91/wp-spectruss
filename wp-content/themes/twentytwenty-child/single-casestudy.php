@@ -34,7 +34,7 @@ get_header();
 
         <div class="case-study-challenga">
             <h3><?php echo get_sub_field('challenge_title'); ?></h3>
-            <a href="<?php echo get_sub_field('challenge_link'); ?>" style="background-color: <?php echo get_sub_field('hero_triangle_background_color'); ?>">The challenga</a>
+            <a href="<?php echo get_sub_field('challenge_link'); ?>" style="background-color: <?php echo get_sub_field('hero_triangle_background_color'); ?>">The challenge</a>
             <p><?php echo get_sub_field('challenge_content'); ?></p>
         </div>
 
