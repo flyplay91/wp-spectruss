@@ -292,8 +292,8 @@
                 },
                 {
                     "key": "field_5ec7f77277969",
-                    "label": "Case Study Video 1",
-                    "name": "case_study_video_1",
+                    "label": "Solution Under Video",
+                    "name": "solution_under_video",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -351,6 +351,25 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_5ec81230e9b6c",
+                            "label": "Case Study Item Video",
+                            "name": "case_study_item_video",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
                         },
                         {
                             "key": "field_5ec47e34dca15",
@@ -436,5 +455,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1590163773
+    "modified": 1590170177
 }
