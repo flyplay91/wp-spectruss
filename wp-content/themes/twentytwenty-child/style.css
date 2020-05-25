@@ -2127,6 +2127,7 @@ ul, li {
   font-size: calc(27em / 16);
   text-transform: uppercase;
   font-family: "Gotham-Black";
+  letter-spacing: 2px;
 }
 
 .single-case-study .case-study-challenga a {
@@ -2395,27 +2396,90 @@ ul, li {
   color: black;
 }
 
+/* ========= Thank You Page =========== */
+.thank-you-page {
+  background-repeat: no-repeat;
+  height: calc(721em / 16);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you-page .thank-you-page__inner {
+  background-color: white;
+  text-align: center;
+  position: relative;
+  width: calc(622em / 17);
+  height: calc(343em / 16);
+  border: solid 4px black;
+  outline: 15px solid white;
+  padding-top: 30px;
+}
+
+.thank-you-page__inner h3 {
+  font-size: calc(24em / 16);
+  text-transform: uppercase;
+  font-family: "Gotham-Black";
+  letter-spacing: 2px;
+}
+
+.thank-you-page__inner .thank-you__inner-left-dot {
+  position: absolute;
+  left: 10px;
+}
+
+.thank-you-page__inner p {
+  font-size: calc(12em / 16);
+  font-family: "Gotham-Medium";
+  margin-top: calc(40em / 16);
+}
+
+.thank-you-page__inner .thank-you__inner-right-dot {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.thank-you-page__inner a {
+  font-size: calc(18em / 16);
+  color: white;
+  text-transform: uppercase;
+  font-family: "Gotham-Black";
+  background-color: black;
+  display: inline-block;
+  position: absolute;
+  bottom: calc(30em / 16);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 35px;
+  letter-spacing: 2px;
+}
+
 
 /* ========= Responsive ============= */
 @media(max-width: 1440px) {
   .home-page .home-form-dots,
   .case-studies-page .case-studies-form-dots,
   .contact-page .contact-page-form,
-  .about-page .about-form-dots {
+  .about-page .about-form-dots,
+  .single-case-study-page-form .single-case-study-form-dots {
     width: 96%;
   }
 
   .home-page .home-form,
   .case-studies-page .case-studies-form,
   .contact-page .contact-form,
-  .about-page .about-form {
+  .about-page .about-form,
+  .single-case-study-page-form .single-case-study-form {
     width: 70%;
   }
 
   .home-page .btn-contact-submit:after,
   .case-studies-page .btn-contact-submit:after,
   .contact-page .btn-contact-submit:after,
-  .about-page .btn-contact-submit:after {
+  .about-page .btn-contact-submit:after,
+  .single-case-study-page-form .btn-contact-submit:after {
     right: 0px;
     top: 5px;
   }

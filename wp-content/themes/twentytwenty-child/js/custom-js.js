@@ -54,15 +54,17 @@ $(document).ready(function() {
 
 						$('.news-story').append(html);
 				});
-
-				
-            },
+			},
             error: function(x, t, m) {
                 
 			},
             dataType: "html"
         });
 	});
+
+	document.addEventListener( 'wpcf7mailsent', function( event ) {
+		window.location.replace('/thank-you');
+	}, false );
 	
 });
 
