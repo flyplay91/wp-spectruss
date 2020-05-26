@@ -2456,6 +2456,379 @@ ul, li {
   letter-spacing: 2px;
 }
 
+/* ========= VCMO Page ============= */
+.vcmo-page {
+  background-color: black;
+  color: white;
+  padding-top: 110px;
+}
+
+.vcmo-page .vcmo-hero {
+  padding: 0 calc(107em / 16);
+}
+
+.vcmo-page .vcmo-title-introducing {
+  padding-top: calc(43em / 16);
+}
+
+.vcmo-page .vcmo-title-introducing .vcmo-title {
+  position: relative;
+}
+
+.vcmo-page .vcmo-title label {
+  font-size: calc(307em / 16);
+  text-shadow: rgb(52, 52, 52) -0.01em -0.01em 0px, rgb(52, 52, 52) 0.01em -0.01em 0px, rgb(52, 52, 52) -0.01em 0.01em 0px, rgb(52, 52, 52) 0.01em 0.01em 0;
+  color: black;
+  font-family: "Gotham-Black";
+}
+
+.vcmo-page .vcmo-title span {
+  font-size: calc(76em / 16);
+  font-family: "Gotham-Black";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translateX(-50%);
+}
+
+.vcmo-page .vcmo-introducing {
+  display: flex;
+  padding: calc(68em / 16) calc(125em / 16) 0;
+}
+
+.vcmo-page .vcmo-introducing-left {
+  width: 43%;
+}
+
+.vcmo-page .vcmo-introducing-left h3 {
+  font-family: "Gotham-Book";
+  font-size: calc(36em / 16);
+  letter-spacing: 2px;
+}
+
+.vcmo-page .vcmo-introducing-left h2 {
+  font-size: calc(48em / 16);
+  font-family: "Gotham-Black";
+  letter-spacing: 2px;
+  padding-left: calc(40em / 16);
+}
+
+.vcmo-page .vcmo-introducing-right {
+  width: 55%;
+}
+
+.vcmo-page .vcmo-introducing-right p {
+  font-size: calc(26em / 16);
+  font-family: "Gotham-Book";
+}
+
+.vcmo-page .vcmo-contract {
+  padding: calc(90em / 16) calc(84em / 16) 0 calc(96em / 16);
+  display: flex;
+  align-items: center;
+}
+
+.vcmo-page .vcmo-contract-left {
+  width: 43%;
+}
+
+.vcmo-page .vcmo-contract-left h2 {
+  font-size: calc(48em / 16);
+  font-family: "Gotham-Black";
+  letter-spacing: 2px;
+}
+
+.vcmo-page .vcmo-contract-left p {
+  max-width: calc(276em / 16);
+  font-size: calc(26em / 16);
+  padding-top: calc(58em / 16);
+}
+
+.vcmo-page .vcmo-contract-right {
+  width: 55%;
+  position: relative;
+}
+
+.vcmo-page .vcmo-contract-right .vcmo-contract-right-half {
+  position: absolute;
+  bottom: calc(-45em / 16);
+  right: calc(50em / 16);
+}
+
+.vcmo-page .vcmo-work {
+  padding-top: calc(90em / 16);
+  display: flex;
+  justify-content: space-between;
+}
+
+.vcmo-page .vcmo-work .vcmo-work-left {
+  width: 55%;
+}
+
+.vcmo-page .vcmo-work-left .vcmo-work-top-dot {
+  padding-left: calc(30em / 16);
+}
+
+.vcmo-page .vcmo-work-left .vcmo-work-1 {
+  padding-top: calc(90em / 16);
+  padding-left: calc(98em / 16);
+}
+
+.vcmo-page .vcmo-work-left .vcmo-work-bottom-dot {
+  margin-left: auto;
+  margin-top: calc(40em / 16);
+  margin-right: calc(33em / 16);
+}
+
+.vcmo-page .vcmo-work .vcmo-work-right {
+  width: 43%;
+}
+
+.vcmo-page .vcmo-work .vcmo-work-right h2 {
+  font-size: calc(48em / 16);
+  font-family: "Gotham-Black";
+  letter-spacing: 2px;
+}
+
+.vcmo-page .vcmo-work .vcmo-work-right p {
+  padding-top: calc(54em / 16);
+  font-size: calc(26em / 16);
+  max-width: calc(300em / 16);
+  font-family: "Gotham-Book";
+}
+
+.vcmo-page .vcmo-work .vcmo-work-2 {
+  margin-top: calc(25em / 16);
+}
+
+.vcmo-page .vcmo-delivering {
+  padding-top: calc(90em / 16);
+  position: relative;
+}
+
+.vcmo-page .vcmo-delivering-left {
+  position: absolute;
+  left: calc(156em / 16);
+  bottom: 0;
+}
+
+.vcmo-page .vcmo-delivering-left h2 {
+  font-size: calc(48em / 16);
+  font-family: "Gotham-Black";
+  letter-spacing: 2px;
+}
+
+.vcmo-page .vcmo-delivering-left p {
+  font-size: calc(26em / 16);
+  font-family: "Gotham-Book";
+  padding-top: calc(55em / 16);
+  max-width: calc(312em / 16);
+}
+
+.vcmo-page .vcmo-delivering-right {
+  width: calc(885em / 16);
+  margin-left: auto;
+}
+
+.vcmo-page .vcmo-details {
+  padding-top: calc(90em / 16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vcmo-page .vcmo-details-left {
+  width: 48%;
+}
+
+.vcmo-page .vcmo-details-left img {
+  width: 100%;
+}
+
+.vcmo-page .vcmo-details-right {
+  width: 48%;
+  display: flex;
+  border: solid 3px white;
+  border-right: none;
+}
+
+.vcmo-page .vcmo-details-right h4 {
+  width: 22%;
+  writing-mode: vertical-lr;
+  font-size: calc(20em / 16);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: calc(20em / 16);
+  padding-left: calc(46em / 16);
+}
+
+.vcmo-page .vcmo-details-right ul {
+  width: 77%;
+}
+
+.vcmo-page .vcmo-details-right ul li {
+  font-size: calc(26em / 16);
+  list-style-type: disc;
+  font-family: "Gotham-Black";
+  padding: calc(11.5em / 16) 0;
+}
+
+.vcmo-page .vcmo-bottom-dot {
+  padding-top: calc(60em / 16);
+  padding-left: calc(200em / 16);
+}
+
+.vcmo-page .vcmo-page-form {
+  padding-top: calc(121em / 16);
+}
+
+.vcmo-page .vcmo-page-form h2 {
+  font-size: calc(115em / 16);
+  font-family: "Gotham-Light";
+  line-height: calc(15em / 16);
+  letter-spacing: 2px;
+  padding-left: calc(10em / 16);
+}
+
+.vcmo-page .vcmo-page-form h2 b {
+  font-family: "Gotham-Black";
+}
+
+.vcmo-page .vcmo-form-dots {
+  padding-top: calc(50em / 16);
+  display: flex;
+  justify-content: space-between;
+}
+
+.vcmo-page .vcmo-form-dots .vcmo-form {
+  width: calc(1040em / 16);
+}
+
+.vcmo-page .vcmo-form-dots .vcmo-dots {
+  width: calc(352em / 16);
+  padding-right: 10px;
+}
+
+.vcmo-page .vcmo-form-dots .vcmo-dots img {
+  width: 100%;
+}
+
+.vcmo-page .vcmo-form .grid {
+  border-top: solid 5px white;
+  border-right: solid 5px white;
+  border-bottom: solid 5px white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vcmo-page .vcmo-form .grid .your-first-name, 
+.vcmo-page .vcmo-form .grid .your-last-name, 
+.vcmo-page .vcmo-form .grid .your-email, 
+.vcmo-page .vcmo-form .grid .your-phone {
+  width: 33.333%;
+}
+
+.vcmo-page .vcmo-form .grid .your-company, 
+.vcmo-page .vcmo-form .grid .your-message {
+  width: 66.666%;
+}
+
+.vcmo-page .vcmo-form .grid input, 
+.vcmo-page .vcmo-form .grid textarea {
+  border: none;
+  font-size: calc(14em / 16);
+  font-family: "Gotham-Book";
+  background-color: black;
+  color: white;
+}
+
+.vcmo-page .vcmo-form .grid textarea {
+  height: calc(285em / 16);
+  border-right: solid 5px white;
+}
+
+.vcmo-page .vcmo-form .grid .your-email input, 
+.vcmo-page .vcmo-form .grid .your-phone input {
+  border-bottom: solid 5px white;
+}
+
+.vcmo-page .vcmo-form .grid input {
+  height: calc(65em / 16);
+}
+
+.vcmo-page .btn-contact-submit {
+  text-align: right;
+  margin-top: calc(39em / 16);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.vcmo-page .btn-contact-submit:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: solid 4px white;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+}
+
+.vcmo-page .btn-contact-submit input {
+  font-family: "Gotham-Black";
+  font-size: calc(23em / 16);
+  padding: 0;
+  background-color: transparent;
+  color: white;
+}
+
+.vcmo-page .btn-contact-submit:after {
+  content: '';
+  background-image: url(assets/images/right_arrow.png);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 2px;
+  top: 9px;
+}
+
+.vcmo-page .vcmo-form .grid input:focus,
+.vcmo-page .vcmo-form .grid textarea:focus {
+  outline: none;
+} 
+
+.vcmo-page .vcmo-form .grid .your-first-name input, 
+.vcmo-page .vcmo-form .grid .your-last-name input, 
+.vcmo-page .vcmo-form .grid .your-company input {
+  border-bottom: solid 5px white;
+  border-right: solid 5px white;
+}
+
+
+.vcmo-page .vcmo-form .grid input::-webkit-input-placeholder,
+.vcmo-page .vcmo-form .grid textarea::-webkit-input-placeholder {
+  color: white;
+  font-family: "Gotham-Book";
+}
+.vcmo-page .vcmo-form .grid input::-moz-placeholder,
+.vcmo-page .vcmo-form .grid textarea::-moz-placeholder {
+  color: white;
+  font-family: "Gotham-Book";
+}
+.vcmo-page .vcmo-form .grid input:-ms-input-placeholder,
+.vcmo-page .vcmo-form .grid textarea:-ms-input-placeholder {
+  color: white;
+  font-family: "Gotham-Book";
+}
+.vcmo-page .vcmo-form .grid input:-moz-placeholder,
+.vcmo-page .vcmo-form .grid textarea:-moz-placeholder {
+  color: white;
+  font-family: "Gotham-Book";
+}
 
 /* ========= Responsive ============= */
 @media(max-width: 1440px) {
@@ -2479,7 +2852,8 @@ ul, li {
   .case-studies-page .btn-contact-submit:after,
   .contact-page .btn-contact-submit:after,
   .about-page .btn-contact-submit:after,
-  .single-case-study-page-form .btn-contact-submit:after {
+  .single-case-study-page-form .btn-contact-submit:after,
+  .vcmo-page .btn-contact-submit:after {
     right: 0px;
     top: 5px;
   }
