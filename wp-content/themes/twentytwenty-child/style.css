@@ -2830,6 +2830,506 @@ ul, li {
   font-family: "Gotham-Book";
 }
 
+/* ========= Spectruss MD ========== */
+.spectruss-md-page .spectruss-md-intro {
+  background-color: black;
+  color: white;
+  padding-top: 110px;
+}
+
+.spectruss-md-page .md-intro-video {
+  width: 80%;
+  margin: 0 auto;
+  height: 45vw;
+  margin-bottom: calc(40em / 16);
+}
+
+.spectruss-md-page .md-intro-video img {
+  width: 100%;
+  height: auto;
+}
+
+.spectruss-md-page .md-intro-heading-title-container {
+  margin-left: 5em;
+}
+
+.spectruss-md-page .spectruss-md-mark {
+  position: relative;
+  font-size: calc(76.02em / 16);
+  font-weight: 900;
+  text-transform: uppercase;
+  max-width: 7.25em;
+  line-height: 1.2;
+  left: 4.5em;
+  bottom: 1.7em;
+}
+
+.spectruss-md-page .md-intro-paragraph-section {
+  width: calc(386em / 12);
+  line-height: 1.2;
+  position: relative;
+  left: 45em;
+  bottom: 4em;
+}
+
+.spectruss-md-page .md-intro-paragraph-section h2 {
+  font-size: calc(48em / 16);
+  font-family: "Gotham-Black";
+  margin-bottom: 1.5em;
+  letter-spacing: 2px;
+}
+
+.spectruss-md-page .md-intro-paragraph-section p {
+  font-size: calc(27em / 16);
+  font-family: "Gotham-Bold";
+  line-height: calc(20em / 16);
+}
+
+.spectruss-md-page .spectruss-md-items {
+  background-color: black;
+  color: white;
+  padding-bottom: 6em;
+}
+
+.spectruss-md-page .spectruss-md-item-1 {
+  display: flex;
+  padding-left: calc(100em / 16);
+  padding-right: calc(100em / 16);
+}
+
+.spectruss-md-page .md-item-1-left {
+  width: 50%;
+  padding-right: calc(122em / 16);
+  padding-left: calc(50em / 16);
+}
+
+.spectruss-md-page .md-item-1-right {
+  width: 50%;
+  padding-top: calc(100em / 16);
+}
+
+.spectruss-md-page .md-item-1-right .item-1-right-img {
+  width: 100%;
+}
+
+.spectruss-md-page .md-item-1-right .item-1-right-img-half {
+  margin-top: calc(100em / 16);
+  margin-left: auto;
+}
+
+.spectruss-md-page .md-item-1-right .item-1-right-img-dot {
+  margin-top: calc(44em / 16);
+}
+
+.spectruss-md-page .num {
+  font-size: calc(19em / 16);
+  font-family: "Gotham-Black";
+  letter-spacing: 2px;
+}
+
+.spectruss-md-page .item-title-1 {
+  font-size: calc(22em / 16);
+  font-family: "Gotham-Book";
+}
+
+.spectruss-md-page .item-subtitle-1 {
+  font-size: calc(34em / 16);
+  font-family: "Gotham-Medium";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.spectruss-md-page .item-subtitle-underline {
+  width: 100%;
+  height: 5px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  margin: 0.5em 0px 0px;
+}
+
+.spectruss-md-page .model-text-1 {
+  font-size: calc(80em / 16);
+  font-family: "Gotham-Black";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.spectruss-md-page .paragraph p {
+  font-size: calc(18em / 16);
+  font-family: "Gotham-Book";
+  margin-top: calc(40em / 16);
+}
+
+.spectruss-md-page .spectruss-md-item-2 {
+  display: flex;
+  padding-left: calc(100em / 16);
+  padding-right: calc(100em / 16);
+}
+
+.spectruss-md-page .md-item-2-left {
+  width: 50%;
+  padding-right: calc(122em / 16);
+  padding-left: calc(50em / 16);
+}
+
+.spectruss-md-page .md-item-2-right {
+  width: 50%;
+  padding-top: calc(200em / 16);
+}
+
+.spectruss-md-page .md-item-2-right .item-2-right-img {
+  width: 100%;
+}
+
+.spectruss-md-page .md-item-2-right .item-2-right-img-dot {
+  width: 100%;
+  margin-top: calc(88em / 16);
+}
+
+.spectruss-md-page .spectruss-md-model-1 .black-bar {
+  background-color: black;
+  height: calc(280em / 50);
+  box-sizing: border-box;
+}
+
+.spectruss-md-page .spectruss-md-model-1 .white-bar {
+  background-color: white;
+  transform: rotate(22.5deg);
+  position: relative;
+  bottom: 9em;
+  right: 8.5em;
+  width: 65%;
+  height: 20em;
+  margin-bottom: -20em;
+}
+
+.spectruss-md-page .md-model-1-content {
+  z-index: 1;
+  position: relative;
+}
+
+.spectruss-md-page .md-model-1-content .smd-top-row {
+  padding-left: calc(193em / 16);
+  width: calc(550em / 16);
+}
+
+.spectruss-md-page .md-model-1-content .smd-middle-row {
+  padding: 0 calc(193em / 16);
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(40em / 16);
+}
+
+.spectruss-md-page .md-model-1-content .smd-middle-row .left-paragraph,
+.spectruss-md-page .md-model-1-content .smd-middle-row .right-paragraph {
+  font-size: calc(18em / 16);
+  width: calc(349em / 16);
+}
+
+.spectruss-md-page .md-model-1-content .smd-bottom-row {
+  margin-top: calc(120em / 16);
+}
+
+.spectruss-md-page .md-model-1-content .smd-bottom-row img {
+  margin: 0 auto;
+}
+
+.spectruss-md-page .md-model-1-content .subtitle {
+  font-size: calc(23em / 16);
+  font-family: "Gotham-Book";
+}
+
+.spectruss-md-page .md-model-1-content .title {
+  font-size: calc(34em / 16);
+  text-transform: uppercase;
+  font-family: "Gotham-Medium";
+  letter-spacing: 7px;
+}
+
+.spectruss-md-page .md-model-1-content .title-underline {
+  width: 100%;
+  height: 5px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.spectruss-md-page .md-model-1-content .model-text {
+  font-size: calc(80em / 16);
+  font-family: "Gotham-Black";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.spectruss-md-page .spectruss-md-model-2 {
+  margin-top: calc(174em / 16);
+  padding-bottom: calc(100em / 16);
+}
+
+.spectruss-md-page .spectruss-md-model-2 .heading-row {
+  padding-left: calc(189em / 16);
+  padding-right: calc(44em / 16);
+  display: flex;
+  justify-content: space-between;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .heading-row .heading-row-left {
+  width: calc(595em / 16);
+  object-fit: contain;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .heading-row .heading-row-right {
+  width: calc(523em / 16);
+}
+
+.spectruss-md-page .spectruss-md-model-2 .levels-section {
+  padding-left: calc(189em / 16);
+  padding-right: calc(146em / 16);
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block {
+  margin-top: calc(100em / 16);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .level-block-left {
+  width: calc(467em / 16);
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .level-block-right {
+  width: calc(603em / 16);
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .level-block-right img {
+  width: 100%;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block.level-block--1 .level-hours-box {
+  width: calc(103em / 16);
+  height: calc(103em / 16);
+  border: solid 3px black;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block.level-block--2 .level-hours-box {
+  background-color: #d0d0d0;
+  padding: 10px;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block.level-block--3 .level-hours-box {
+  background-color: #e6d304;
+  padding: 10px;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block.level-block--4 .level-hours-box {
+  background-image: url('assets/images/platinum-hours-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .level-hours-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .level-title {
+  font-size: calc(35em / 16);
+  font-family: "Gotham-Medium";
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-left: 20px;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .level-top-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .level-bottom-row {
+  border-top: solid 5px black;
+  padding-top: 20px;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block  .level-paragraph {
+  font-size: calc(18em / 16);
+  font-family: "Gotham-Book";
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .level-hours-text {
+  font-size: calc(62em / 16);
+  font-family: "Gotham-Black";
+  line-height: 1;
+}
+
+.spectruss-md-page .spectruss-md-model-2 .level-block .hours-per-month {
+  font-size: calc(16em / 16);
+  font-family: "Gotham-Medium";
+  text-transform: uppercase;
+}
+
+.spectruss-md-page .spectruss-md-page-form {
+  padding-bottom: calc(90em / 16);
+}
+
+.spectruss-md-page .spectruss-md-page-form h2 {
+  font-size: calc(86em / 16);
+  font-family: "Gotham-Light";
+  padding-left: calc(8em / 16);
+  letter-spacing: 2px;
+  margin-bottom: calc(11em / 16);
+}
+
+.spectruss-md-page .spectruss-md-page-form h2 b {
+  font-family: "Gotham-Black";
+}
+
+.spectruss-md-page .spectruss-md-form-dots {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spectruss-md-page .spectruss-md-form {
+  width: calc(1000em / 16);
+}
+
+.spectruss-md-page .spectruss-md-dots {
+  width: calc(338em / 16);
+}
+
+.spectruss-md-page .spectruss-md-dots img {
+  filter: invert(1);
+  width: 100%;
+}
+
+.spectruss-md-page .spectruss-md-form .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.spectruss-md-page .spectruss-md-form .grid .your-first-name,
+.spectruss-md-page .spectruss-md-form .grid .your-last-name,
+.spectruss-md-page .spectruss-md-form .grid .your-email,
+.spectruss-md-page .spectruss-md-form .grid .your-phone {
+  width: 33.333%;
+}
+
+.spectruss-md-page .spectruss-md-form .grid .your-company,
+.spectruss-md-page .spectruss-md-form .grid .your-message {
+  width: 66.666%;
+}
+
+.spectruss-md-page .spectruss-md-form .grid input {
+  height: calc(65em / 16);
+}
+
+.spectruss-md-page .spectruss-md-form .grid input,
+.spectruss-md-page .spectruss-md-form .grid textarea {
+  border: none;
+  font-size: calc(14em / 16);
+  font-family: "Gotham-Book";
+}
+
+.spectruss-md-page .spectruss-md-form .grid {
+  border-top: solid 5px black;
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
+}
+
+.spectruss-md-page .spectruss-md-form .grid .your-first-name input,
+.spectruss-md-page .spectruss-md-form .grid .your-last-name input,
+.spectruss-md-page .spectruss-md-form .grid .your-company input {
+  border-bottom: solid 5px black;
+  border-right: solid 5px black;
+}
+
+.spectruss-md-page .spectruss-md-form .grid .your-email input,
+.spectruss-md-page .spectruss-md-form .grid .your-phone input {
+  border-bottom: solid 5px black;
+}
+
+.spectruss-md-page .spectruss-md-form .grid textarea {
+  height: calc(285em / 16);
+  border-right: solid 5px black;
+}
+
+.spectruss-md-page .spectruss-md-form .grid input:focus,
+.spectruss-md-page .spectruss-md-form .grid textarea:focus {
+  outline: none;
+} 
+
+.spectruss-md-page .spectruss-md-form .grid input::-webkit-input-placeholder,
+.spectruss-md-page .spectruss-md-form .grid textarea::-webkit-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.spectruss-md-page .spectruss-md-form .grid input::-moz-placeholder,
+.spectruss-md-page .spectruss-md-form .grid textarea::-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.spectruss-md-page .spectruss-md-form .grid input:-ms-input-placeholder,
+.spectruss-md-page .spectruss-md-form .grid textarea:-ms-input-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+.spectruss-md-page .spectruss-md-form .grid input:-moz-placeholder,
+.spectruss-md-page .spectruss-md-form .grid textarea:-moz-placeholder {
+  color: black;
+  font-family: "Gotham-Book";
+}
+
+.spectruss-md-page .btn-contact-submit {
+  text-align: right;
+  margin-top: calc(39em / 16);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.spectruss-md-page .btn-contact-submit:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: solid 4px black;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+}
+
+.spectruss-md-page .btn-contact-submit:after {
+  content: '';
+  background-image: url('assets/images/right_arrow.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  position: absolute;
+  right: 2px;
+  top: 9px;
+}
+
+.spectruss-md-page .btn-contact-submit input {
+  font-family: "Gotham-Black";
+  font-size: calc(23em / 16);
+  padding: 0;
+  background-color: transparent;
+  color: black;
+}
+
+
+
 /* ========= Responsive ============= */
 @media(max-width: 1440px) {
   .home-page .home-form-dots,
@@ -2853,7 +3353,8 @@ ul, li {
   .contact-page .btn-contact-submit:after,
   .about-page .btn-contact-submit:after,
   .single-case-study-page-form .btn-contact-submit:after,
-  .vcmo-page .btn-contact-submit:after {
+  .vcmo-page .btn-contact-submit:after,
+  .spectruss-md-page .btn-contact-submit:after {
     right: 0px;
     top: 5px;
   }
