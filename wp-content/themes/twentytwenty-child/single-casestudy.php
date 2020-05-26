@@ -126,6 +126,72 @@ get_header();
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
+            <?php elseif (get_sub_field('single_case_study_tag') == 'grace-financial-services') :?>
+                <?php if ( have_rows( 'case_studies_repeater' ) ) : 
+                    while ( have_rows( 'case_studies_repeater' ) ) : the_row();
+                    $case_study_image = get_sub_field('case_study_item_image');
+                    $case_study_image_mobi = get_sub_field('case_study_item_mobile_image');
+                    $case_study_video = get_sub_field('case_study_item_mobile_image'); ?>
+                        <div class="case-study-item case-study-item-<?php echo get_row_index(); ?>">
+                            <?php if (get_row_index() == 2): ?>
+                                <div class="case-study-item-grace-financial-services-video">
+                                    <script src="https://fast.wistia.com/embed/medias/d1t50kqi1c.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_d1t50kqi1c videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+                                </div>
+                            <?php else: ?>
+                                <img src="<?php echo esc_url( $case_study_image['url'] ) ?>">
+                                <?php if (get_sub_field('case_study_item_video')): ?>
+                                    <div class="case-study-block-video">
+                                        <?php echo get_sub_field('case_study_item_video'); ?>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            <?php elseif (get_sub_field('single_case_study_tag') == 'chattanooga-whiskey') :?>
+                <?php if ( have_rows( 'case_studies_repeater' ) ) : 
+                    while ( have_rows( 'case_studies_repeater' ) ) : the_row();
+                    $case_study_image = get_sub_field('case_study_item_image');
+                    $case_study_image_mobi = get_sub_field('case_study_item_mobile_image');
+                    $case_study_video = get_sub_field('case_study_item_mobile_image'); ?>
+                        <div class="case-study-item case-study-item-<?php echo get_row_index(); ?>">
+                            <?php if (get_row_index() == 2): ?>
+                                <div class="case-study-item-chattanooga-whiskey">
+                                    <script src="https://fast.wistia.com/embed/medias/7n1inoayd5.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_7n1inoayd5 videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+                                </div>
+                            <?php else: ?>
+                                <img src="<?php echo esc_url( $case_study_image['url'] ) ?>">
+                                <?php if (get_sub_field('case_study_item_video')): ?>
+                                    <div class="case-study-block-video">
+                                        <?php echo get_sub_field('case_study_item_video'); ?>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            <?php elseif (get_sub_field('single_case_study_tag') == 'hutton-smith') :?>
+                <?php if ( have_rows( 'case_studies_repeater' ) ) : 
+                    while ( have_rows( 'case_studies_repeater' ) ) : the_row();
+                    $case_study_image = get_sub_field('case_study_item_image');
+                    $case_study_image_mobi = get_sub_field('case_study_item_mobile_image');
+                    $case_study_video = get_sub_field('case_study_item_mobile_image'); ?>
+                        <div class="case-study-item case-study-item-<?php echo get_row_index(); ?>">
+                            <?php if (get_row_index() == 2): ?>
+                                <div class="case-study-item-hutton-smith">
+                                    <script src="https://fast.wistia.com/embed/medias/a6u6xguehm.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_a6u6xguehm videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+                                </div>
+                            <?php else: ?>
+                                <img src="<?php echo esc_url( $case_study_image['url'] ) ?>">
+                                <?php if (get_sub_field('case_study_item_video')): ?>
+                                    <div class="case-study-block-video">
+                                        <?php echo get_sub_field('case_study_item_video'); ?>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             <?php else: ?>
                 <?php if ( have_rows( 'case_studies_repeater' ) ) : 
                     while ( have_rows( 'case_studies_repeater' ) ) : the_row();
