@@ -59,7 +59,14 @@ get_header();
                     <?php if ( have_rows( 'packages_repeater' ) ) : 
                         while ( have_rows( 'packages_repeater' ) ) : the_row();
                         $package_link = get_sub_field('package_link'); ?>
-                        <li><a href="<?php echo esc_url($package_link); ?>"><?php echo get_sub_field('package_text'); ?></a></li>
+                        <li>
+                            <a href="<?php echo esc_url($package_link); ?>">
+                                <span><?php echo get_sub_field('package_text'); ?></span>
+                                <div class="capability-package-btn">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/right_arrow.png">
+                                </div>
+                            </a>
+                        </li>
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </ul>
@@ -77,7 +84,7 @@ get_header();
                 <?php if ( have_rows( 'brand_image_repeater' ) ) : 
                     while ( have_rows( 'brand_image_repeater' ) ) : the_row();
                     $brand_image = get_sub_field('brand_image'); ?>
-                    <div class="about-brand-item">
+                    <div class="about-brand-item about-brand-item-<?php echo get_row_index() ?>">
                         <img src="<?php echo esc_url( $brand_image['url'] ); ?>">
                     </div>
                     <?php endwhile; ?>

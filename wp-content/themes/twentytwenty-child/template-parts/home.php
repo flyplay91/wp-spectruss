@@ -16,12 +16,17 @@ get_header();
 		<?php while( have_rows('hero_group') ): the_row(); 
 			$dot_image = get_sub_field('hero_dot_image');
 			$line_image = get_sub_field('hero_line_image');
+			$line_image_image = get_sub_field('hero_line_image_mobile');
 			$sticker_logo = get_sub_field('hero_sticker_logo');
 		?>
 		<div class="hero">
+			<div class="hero-square"></div>
 			<div class="hero-triangle"></div>
 			<div class="hero-title">
 				<?php echo get_sub_field('hero_title'); ?>
+			</div>
+			<div class="hero-title-mobile">
+				<?php echo get_sub_field('hero_title_mobile'); ?>
 			</div>
 			<div class="hero-dot"></div>
 			<div class="hero-line"></div>
@@ -44,11 +49,17 @@ get_header();
 				$case_study_link = get_sub_field('case_study_button_link'); ?>
 
 				<div class="casestudy <?php if (get_sub_field('check_white_color') == true): ?>vert<?php endif;?> casestudy--liberty animatable moveUp <?php if (get_row_index() == 1): ?> first-case-study<?php endif; ?>">
-					<img src="<?php echo get_sub_field('case_study_background_image')['url']; ?>" />
+					<img class="desktop-view" src="<?php echo get_sub_field('case_study_background_image')['url']; ?>" />
+					<img class="mobile-view" src="<?php echo get_sub_field('case_study_background_image_mobile')['url']; ?>" />
 					<div class="casestudy-content">
 						<h2 class="title-casestudy"><?php echo get_sub_field('case_study_title'); ?></h2>
 						<div class="desc-casestudy"><?php echo get_sub_field('case_study_description'); ?></div>
-						<a href="<?php echo esc_url($case_study_link); ?>" class="btn-casestudy"><?php echo get_sub_field('case_study_button_text'); ?></a>
+						<a href="<?php echo esc_url($case_study_link); ?>" class="btn-casestudy">
+							<span><?php echo get_sub_field('case_study_button_text'); ?></span>
+							<div class="casestudy-content-btn">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/right_arrow.png">
+							</div>
+						</a>
 					</div>
 				</div>
 				<?php endwhile; ?>
@@ -107,7 +118,8 @@ get_header();
 				</div>
 
 				<div class="dot-img">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots.png">
+					<img class="desktop-view" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots.png">
+					<img class="mobile-view" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/news_dots_mobile.png">
 				</div>
 			</div>
 		</div>
@@ -118,7 +130,8 @@ get_header();
 		<?php while( have_rows('contact_form') ): the_row(); 
 		$contact_dot_image = get_sub_field('contact_form_dots'); ?>
 		<div class="home-page-form">
-			<h2><?php echo get_sub_field('contact_form_title'); ?></h2>
+			<h2 class="desktop-view"><?php echo get_sub_field('contact_form_title'); ?></h2>
+			<h2 class="mobile-view"><?php echo get_sub_field('contact_form_title_mobile'); ?></h2>
 			<div class="home-form-dots">
 				<div class="home-form">
 					<?php echo do_shortcode( get_sub_field('contact_form_short_code') ); ?>
@@ -137,6 +150,11 @@ get_header();
 		}
 		.home-page .hero-line {
 			background-image: url(<?php echo esc_url( $line_image['url'] ); ?>);
+		}
+		@media(max-width: 768px) {
+			.home-page .hero-line {
+				background-image: url(<?php echo esc_url( $line_image_image['url'] ); ?>);
+			}
 		}
 	</style>
 </main>

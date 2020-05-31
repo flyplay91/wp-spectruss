@@ -17,7 +17,7 @@ get_header();
         $hero_dot_image = get_sub_field('hero_dot_image');
         $contact_dot_image = get_sub_field('contact_form_dot_image'); ?>
             <div class="case-studies-hero">
-                <div class="case-studies-hero-triangle"></div>
+                <div class="case-studies-hero-triangle desktop-view"></div>
                 <h2><?php echo get_sub_field('hero_title'); ?></h2>
                 <img src="<?php echo esc_url( $hero_dot_image['url'] ); ?>">
             </div>

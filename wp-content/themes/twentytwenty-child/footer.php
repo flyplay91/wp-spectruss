@@ -13,25 +13,35 @@
 
 ?>
 		<footer id="site-footer" role="contentinfo" class="header-footer-group">
+			<?php $footer_logo = get_field('footer_logo', 'option'); ?>
+			<img class="footer-logo" src="<?php echo esc_url(( $footer_logo )['url']); ?>">
 			<div class="nav-block">
-				<div class="address-block">
-					<?php $footer_logo = get_field('footer_logo', 'option'); ?>
-					<img src="<?php echo esc_url(( $footer_logo )['url']); ?>">
-					<p><a target="_blank" href="<?php echo get_field('footer_address_link', 'option'); ?>"><?php echo get_field('footer_address', 'option'); ?></a></p>
-					<p><a target="_blank" href="tel:<?php echo get_field('footer_number_link', 'option'); ?>"><?php echo get_field('footer_number', 'option'); ?></a></p>
-					<p><a target="_blank" href="mailto:<?php echo get_field('footer_mail', 'option'); ?>"><?php echo get_field('footer_mail', 'option'); ?></a></p>
-					<ul>
-						<?php if ( have_rows( 'footer_social', 'option' ) ) : 
-							while ( have_rows( 'footer_social', 'option' ) ) : the_row(); 
-							$footer_social_img = get_sub_field('social_icon', 'option'); ?>
-							<li>
-								<a target="_blank" href="<?php echo get_sub_field('social_link', 'option'); ?>">
-									<img src="<?php echo esc_url(( $footer_social_img )['url']); ?>">
-								</a>
-							</li>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</ul>
+				<div class="footer-address-section">
+					<div class="address-block">
+					
+						<h3>ATLANTA</h3>
+						<p><a target="_blank" href="<?php echo get_field('footer_address_link', 'option'); ?>"><?php echo get_field('footer_address', 'option'); ?></a></p>
+						<p><a target="_blank" href="tel:<?php echo get_field('footer_number_link', 'option'); ?>"><?php echo get_field('footer_number', 'option'); ?></a></p>
+						<p><a target="_blank" href="mailto:<?php echo get_field('footer_mail', 'option'); ?>"><?php echo get_field('footer_mail', 'option'); ?></a></p>
+						<ul>
+							<?php if ( have_rows( 'footer_social', 'option' ) ) : 
+								while ( have_rows( 'footer_social', 'option' ) ) : the_row(); 
+								$footer_social_img = get_sub_field('social_icon', 'option'); ?>
+								<li>
+									<a target="_blank" href="<?php echo get_sub_field('social_link', 'option'); ?>">
+										<img src="<?php echo esc_url(( $footer_social_img )['url']); ?>">
+									</a>
+								</li>
+								<?php endwhile; ?>
+							<?php endif; ?>
+						</ul>
+					</div>
+					<div class="address-block">
+						<h3>CHATTANOOGA</h3>
+						<p><a target="_blank" href="">3800 ST. ELMO AVENUE SUITE 221<br>CHATTANOOGA, TN 37409</a></p>
+						<p><a target="_blank" href="tel:4238008633">423.800.8633</a></p>
+						<p><a target="_blank" href="mailto:info@spectruss.com">info@spectruss.com</a></p>
+					</div>
 				</div>
 				<ul class="main-nav">
 					<?php if ( have_rows( 'footer_menu_repeater', 'option' ) ) : 
@@ -76,8 +86,10 @@
 					</div>
 				</div>
 				<div class="dots">
-					<?php $footer_dot = get_field('footer_dot_image', 'option'); ?>
-					<img src="<?php echo esc_url(( $footer_dot )['url']); ?>">
+					<?php $footer_dot = get_field('footer_dot_image', 'option');
+					$footer_dot_mobile = get_field('footer_dot_image_mobile', 'option'); ?>
+					<img class="desktop-view" src="<?php echo esc_url(( $footer_dot )['url']); ?>">
+					<img class="mobile-view" src="<?php echo esc_url(( $footer_dot_mobile )['url']); ?>">
 				</div>
 			</div>
 		</footer>

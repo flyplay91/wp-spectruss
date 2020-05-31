@@ -26,7 +26,7 @@ get_header();
 
     <style>
         .thank-you-page {
-            background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/thank_you_bg.jpg');
+            background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/thank_you_bg_new.jpg');
         }
     </style>
 </main>

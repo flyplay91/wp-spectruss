@@ -47,7 +47,7 @@ get_header();
             </div>
             <div class="vcmo-work-right">
                 <h2>So,<br>how does it work?</h2>
-                <p>To start, the Spectruss team will review your current business data and compare it to your potential marketplace. After that, we will research your competitors and analyze trends in your target consumers behavior. Based on the results, we will put together a strategy to help guide your business through it’s desired level of growth.</p>
+                <p>To start, the Spectruss team will review your current business data and compare it to your potential marketplace. After that, we will research your competitors and analyze trends in your target consumers' behavior. Based on the results, we will put together a strategy to help guide your business through it’s desired level of growth.</p>
                 <img class="vcmo-work-2" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/vcmo_work_2.jpg">
             </div>
         </div>

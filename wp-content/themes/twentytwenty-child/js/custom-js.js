@@ -1,4 +1,16 @@
 $(document).ready(function() {
+	current_url = $(location).attr('href'),
+    split_url = current_url.split("/"),
+	last_param = split_url[split_url.length-2];
+	if (last_param == 'about') {
+		$(window).on('scroll', function() {
+			if ($(this).scrollTop() > $('.about-brand-items').offset().top - window.innerHeight * 4 / 5) {
+				$('.about-page .about-brand-items').addClass('animating');
+			}
+		});
+	}
+	
+
 	firstCaseStudyAnimation();
 
 	$(window).on('scroll', doAnimations);
